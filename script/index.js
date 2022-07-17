@@ -122,8 +122,8 @@ function mealPlanner(results) {
             <div class="card--button"> View recipe </div>
         </div>
       </div>
-    </a>
-  </div>
+      </a>
+    </div>
 
     <div class="card">
       <a href="recipesDetails.html?id=${friday.id}">

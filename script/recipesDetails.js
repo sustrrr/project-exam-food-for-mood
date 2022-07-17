@@ -68,21 +68,21 @@ function detailsHTML(specificRecipe) {
   if (specificRecipe.instructions === null) {
     instructionsSummary.innerHTML = `
      <div class="recipe--summary">
-      <h2>About the recipe</h2>
-      <p>${specificRecipe.summary}
-      </p>
-    </div>`;
+        <h2>About the recipe</h2>
+        <p>${specificRecipe.summary}
+        </p>
+      </div>`;
   } else {
     instructionsSummary.innerHTML = `
-    <div class="recipe--instructions">
-      <h2>Instructions</h2>
-      <p>${specificRecipe.instructions}
-      </p>
-    </div>
-    <div class="recipe--summary">
-      <h2>Summary</h2>
-      <p>${specificRecipe.summary}
-      </p>
+      <div class="recipe--instructions">
+        <h2>Instructions</h2>
+        <p>${specificRecipe.instructions}
+        </p>
+      </div>
+      <div class="recipe--summary">
+        <h2>Summary</h2>
+        <p>${specificRecipe.summary}
+        </p>
     </div>`;
   }
 }
