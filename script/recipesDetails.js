@@ -1,5 +1,5 @@
 const baseUrl =
-  "https://api.spoonacular.com/recipes/complexSearch?apiKey=3a8706a3071d42009fdc66574acceef5";
+  "https://api.spoonacular.com/recipes/complexSearch?apiKey=4bb467ba21c74a11969ebfe322813867";
 
 const heading = document.querySelector(".recipe--time");
 const image = document.querySelector(".recipe--details--img");
@@ -23,7 +23,7 @@ async function details() {
     const response = await fetch(
       "https://api.spoonacular.com/recipes/" +
         id +
-        "/information?apiKey=3a8706a3071d42009fdc66574acceef5",
+        "/information?apiKey=4bb467ba21c74a11969ebfe322813867",
       {
         headers: {
           "Content-Type": "application/json",
