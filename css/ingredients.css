@@ -1,0 +1,184 @@
+.recipe--welcome--img {
+  height: 20vh;
+  background-image: url("../img/ingredients.jpg");
+}
+
+/* search */
+.search--container {
+  padding: 0em 0em;
+  width: 80%;
+  text-align: right;
+}
+
+.search {
+  width: 77%;
+  margin: 0 auto;
+  text-align: right;
+  display: flex;
+}
+
+.search input {
+  outline: none;
+  box-shadow: none;
+  background: #fff !important;
+  border: 0.1em solid rgb(138, 138, 138);
+  flex: 3;
+  padding: 1em;
+  font-size: 1.1em;
+}
+.search input::placeholder {
+  font-size: 1em;
+  font-style: italic;
+  color: rgb(37, 37, 37);
+}
+
+#search-submit {
+  padding: 0em 0.3em 0em 0.3em;
+  background: none;
+  border: none;
+  color: rgb(61, 61, 61);
+  font-size: 1.9em;
+  vertical-align: middle;
+}
+
+/* cards */
+.cards--ingridients {
+  padding: 10em 0em;
+  width: 77%;
+  margin: 0 auto;
+  display: flex;
+  grid-gap: 3.7em;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.card:last-child {
+  margin-right: auto;
+}
+
+.cards--ingridients {
+  text-align: center;
+}
+
+.card {
+  border-radius: 1em;
+  flex: 1 0 28%;
+  background-color: rgb(255, 255, 255);
+  text-align: left;
+  overflow: hidden;
+  max-width: calc(28% - 1em); /*this*/
+  box-shadow: 0px 0px 3px 0px #cacaca;
+}
+
+.card--image {
+  overflow: hidden;
+  height: 20em;
+}
+
+.card--image img {
+  width: 100%;
+}
+
+.card--text {
+  padding: 0em 1.7em 3em 1.7em;
+  display: flex;
+  flex-direction: column;
+  min-height: 2em;
+}
+
+.card h2 {
+  margin: 1.7em 0em;
+  text-align: left;
+  line-height: 1.3em;
+  color: black;
+  font-size: 1.3em;
+  text-transform: lowercase;
+}
+
+.card h2::first-letter {
+  text-transform: capitalize;
+}
+
+.card--button--container {
+  margin-top: auto;
+}
+
+.card--button {
+  padding: 1em 2em;
+  border-radius: 1em;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 0.8em;
+  color: white;
+  background-color: #863200;
+}
+
+/* small pc */
+@media screen and (max-width: 1250px) {
+  .search--container {
+    width: 90%;
+  }
+  .search {
+    width: 67%;
+  }
+
+  .cards--ingridients {
+    width: 67%;
+  }
+
+  .card {
+    flex: 1 0 37%;
+    max-width: calc(37% - 1em);
+  }
+}
+
+/* tablet pro */
+@media screen and (max-width: 1030px) {
+  .search {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .cards--ingridients {
+    width: 70%;
+  }
+}
+
+/* tablet */
+@media screen and (max-width: 768px) {
+  .card {
+    flex: 1 0 45%;
+    max-width: calc(45% - 1em);
+  }
+
+  .welcome--text {
+    width: 90%;
+  }
+}
+
+/* mobile xl */
+@media screen and (max-width: 611px) {
+  .cards--ingridients {
+    grid-gap: 3.7em;
+    flex-direction: row;
+  }
+
+  .card {
+    flex: 1 0 90%;
+    max-width: calc(90% - 1em);
+    min-width: calc(90% - 1em);
+  }
+
+  .search {
+    width: 100%;
+    margin: 0 auto;
+    text-align: right;
+    display: flex;
+  }
+
+  .search .fas {
+    font-size: 0.9em;
+  }
+}

@@ -1,0 +1,124 @@
+.recipe--details--img {
+  margin-top: 5em;
+  margin-bottom: 1em;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.img-center {
+  margin: 0 auto;
+  background-color: white;
+  width: 67%;
+}
+
+.recipe--details--img img {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.recipe--container {
+  margin: 0 auto;
+  width: 67%;
+  padding: 3em 0em;
+  background-color: white;
+  text-align: center;
+}
+
+.recipe--container h1 {
+  text-align: center;
+}
+
+.recipe--container h2 {
+  font-size: 1.3em;
+}
+
+.recipe--time {
+  width: 100%;
+  font-size: 1.3em;
+  color: rgb(67, 67, 67);
+  display: inline-block;
+}
+
+.recipe--time p {
+  margin: 2em 0em 2em 0em;
+  display: inline-block;
+}
+
+.recipe--time span {
+  font-weight: bold;
+}
+
+.recipe--details--text {
+  display: flex;
+  text-align: left;
+  flex-direction: row; /*mobile*/
+  grid-gap: 5em;
+  line-height: 0.5em;
+  padding: 3em 5em;
+}
+
+.recipe--details--text p {
+  font-weight: bold;
+}
+
+.recipe--details--text span {
+  font-weight: normal;
+}
+
+.ingredient {
+  margin-top: 3em;
+  flex-direction: column;
+  text-align: center;
+}
+
+/**/
+
+.back {
+  margin: 0 auto;
+  padding: 3em;
+  font-size: 1.3em;
+  color: rgb(67, 67, 67);
+  text-align: center;
+}
+
+.back p {
+  display: inline;
+}
+
+/* small pc */
+@media screen and (max-width: 1250px) {
+  .recipe--container {
+    width: 75%;
+  }
+
+  .recipe--details--text {
+    grid-gap: 3em;
+    padding: 3em 3em;
+  }
+
+  .img-center {
+    width: 75%;
+    margin: 0 auto;
+  }
+}
+
+/* tablet pro */
+@media screen and (max-width: 1030px) {
+  .recipe--details--text {
+    text-align: center;
+    flex-direction: column;
+    padding: 0;
+    grid-gap: 3em;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .recipe--container {
+    width: 90%;
+  }
+
+  .img-center {
+    width: 90%;
+  }
+}

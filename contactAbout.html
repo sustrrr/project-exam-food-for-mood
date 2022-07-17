@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="Good Food Mood  | Contact page and about page of Good Food Mood, here you can contact and read more about us. At Good Food Mood you can search for over 1,000 food recipes by ingredients! You can also search for different ingredients to get to know more about them." />
+      <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        rel="stylesheet"
+      />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;700&family=Roboto+Flex:opsz,wght@8..144,400;8..144,500&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet"
+      />
+      <title>Good Food Mood  | Home</title>
+      <link href="css/navFooter.css" rel="stylesheet" />
+      <link href="css/index.css" rel="stylesheet" />
+      <link href="css/contact.css" rel="stylesheet" />
+    </head>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav>
+        <div class="navbox">
+          <div class="logobox">
+            <a class="logo" href="index.html">Good food <span>mood</span></a>
+          </div>
+          <div class="navbar">
+            <ul>
+              <li><a class="menuLink" href="recipes.html">Recipes</a></li>
+              <li><a class="menuLink" href="#newsletter">Newsletter</a></li>
+              <li>
+                <a class="menuLink" href="ingredients.html">Ingredients</a>
+              </li>
+              <li>
+                <a class="menuLink active" href="contactAbout.html">About & contact</a>
+              </li>
+            </ul>
+          </div>
+          <button class="ham">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+
+      <div class="welcome">
+        <div class="welcome--img recipe--welcome--img"></div>
+          <div class="flex">
+            <div class="info">
+              <h1>Contact & about us</h1>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+              ultrices pulvinar nisl, quis ultrices dolor ultrices non. Nullam
+              porta mi in sapien vehicula, et dapibus ligula porttitor.
+              Phasellus suscipit finibus sapien, vestibulum molestie ligula
+              lobortis a. Morbi blandit leo vitae auctor faucibus.
+              <ul>
+                <li><i class="fas fa-at"></i>example@mail.com</li>
+                <li><i class="fas fa-phone"></i>00000299229</li>
+              </ul>
+          </div>
+        <div class="form--container">
+          <form id="contactForm">
+            <div class="bg">
+            <div>
+              <label>
+                First name*
+                <input name="firstName" id="firstName" />
+              </label>
+              <div class="form-error-contact" id="firstNameError">
+                Please enter your first name
+              </div>
+            </div>
+            <div>
+              <label>
+                Last name*
+                <input name="lastName" id="lastName" />
+              </label>
+              <div class="form-error-contact" id="lastNameError">
+                Your last name must be at least 4 characters
+              </div>
+            </div>
+            <div>
+              <label>
+                Email*
+                <input name="email-contact" id="email-contact" />
+              </label>
+              <div class="form-error-contact" id="emailError-contact">
+                Please enter a valid email address
+              </div>
+            </div>
+            <div class="margin--bottom">
+              <label>
+                Message*
+                <textarea name="message" id="message"></textarea>
+              </label>
+              <div class="form-error-contact" id="messageError">
+                Message must be at least 15 characters long.
+              </div>
+            </div>
+          </div>
+          <div class="success_text-contact"><p>Message sent!</p></div>
+            <button>Submit now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="footer--info">
+          <p>At Good food mood you can search for over 1,000 recipes!</p>
+          <a href="contactAbout.html">
+            <div class="main--button">
+              <p>Read more about us</p>
+            </div>
+          </a>
+        </div>
+        <div class="footer--newsletter" id="newsletter">
+          <h2>Sign up for our newsletter</h2>
+          <p>Get our newest recipes in your inbox!</p>
+          <form id="newsletter--form">
+            <input
+              name="emailNewsletter"
+              id="email"
+              placeholder="Your email..."
+            />
+            <div class="form-error" id="emailNewsletterError">
+              Please enter a valid email address
+            </div>
+            <div class="success_text_newsletter">
+              <p>You are signed up for our newsletters!</p>
+            </div>
+            <button>Sign up</button>
+          </form>
+        </div>
+        <div class="footer--main">
+          <div class="logobox">
+            <a class="logo" href="index.html">Good for <span>mood</span></a>
+          </div>
+          <div class="footer--links">
+            <a href="recipes.html">Recipes</a>
+            <a href="ingredients.html">Ingredients</a>
+            <a href="contactAbout.html">About & contact</a>
+          </div>
+          <div class="footer--social">
+            <h3>Follow us on</h3>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+          </div>
+          <div class="footer" id="newsletter"></div>
+        </div>
+      </div>
+    </footer>
+    <script src="script/nav.js"></script>
+    <script src="script/contact.js"></script>
+  </body>
+</html>

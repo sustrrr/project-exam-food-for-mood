@@ -1,0 +1,155 @@
+.recipe--welcome--img {
+  height: 10vh;
+  margin-bottom: 5em;
+  background-image: url("../img/contact.jpg");
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  grid-gap: 10em;
+  margin: 0 auto;
+  align-items: flex-start;
+  align-self: flex-start;
+}
+
+.info {
+  flex: 2;
+  line-height: 2em;
+}
+
+.info ul {
+  margin-top: 2em;
+  font-weight: bold;
+}
+
+.info ul li {
+  list-style: none;
+  line-height: 5em;
+}
+
+.info ul li .fas {
+  margin-right: 1em;
+  font-size: 1.5em;
+}
+
+/* */
+
+.form--container {
+  flex: 2;
+}
+
+.form--container {
+  padding: 0em 0em;
+}
+
+.bg {
+  padding: 2em;
+  background: #5a5a5a;
+  border-radius: 1em;
+  margin-bottom: 2em;
+}
+
+.form--container input,
+.form--container textarea {
+  width: 100%;
+  margin-top: 2px;
+  padding: 0.2em;
+  font-size: 16px;
+  font-family: "roboto", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+form button {
+  background: #863200;
+  border-radius: 1em;
+  padding: 1em 2em;
+  font-size: 0.9em;
+  border: none;
+  width: 200px;
+  color: white;
+  margin-top: 10px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 auto;
+  display: block;
+  font-weight: bold;
+}
+
+.bg div {
+  margin-bottom: 2em;
+}
+
+label {
+  display: block;
+  color: rgb(255, 255, 255);
+  line-height: 2em;
+  font-size: 1.1em;
+}
+
+.form-error-contact {
+  display: none;
+  color: rgb(255, 169, 70);
+  font-size: 1em;
+  margin: 1em 0em;
+}
+
+.success_text-contact {
+  display: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 1em;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  height: 15em;
+}
+
+.margin--bottom {
+  margin-bottom: 4em;
+}
+
+/* small pc */
+@media screen and (max-width: 1250px) {
+  .flex {
+    flex-direction: column;
+    text-align: center;
+    grid-gap: 4em;
+  }
+
+  .form--container {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  form {
+    text-align: left;
+  }
+}
+
+/* tablet pro */
+@media screen and (max-width: 1030px) {
+  .form--container {
+    margin: 0 auto;
+    width: 70%;
+  }
+}
+
+/* tablet */
+@media screen and (max-width: 768px) {
+  .form--container {
+    margin: 0 auto;
+    width: 85%;
+  }
+}
+
+/* mobile xl */
+@media screen and (max-width: 540px) {
+  .form--container {
+    margin: 0 auto;
+    width: 100%;
+  }
+}

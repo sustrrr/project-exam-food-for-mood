@@ -1,0 +1,118 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.wrapper {
+  flex: 1 0 auto;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.smaller--container {
+  padding: 7em 0em;
+  width: 80%;
+}
+
+/* fonts */
+
+h1 {
+  font-size: 2.3em;
+  color: #794e00;
+  font-family: "Oswald", sans-serif;
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #956a13;
+  font-family: "Roboto Flex", sans-serif;
+  text-align: center;
+  margin: 0 auto;
+}
+
+h1,
+h2 {
+  font-weight: lighter;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+p,
+li {
+  font-size: 0.9em;
+  color: rgb(47, 47, 47);
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: bold;
+}
+
+.logo {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0em;
+}
+
+.card h2 {
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: lighter;
+}
+
+/* general */
+
+.main--button {
+  margin: 0 auto;
+  border: 0.1em solid #65a236;
+  padding: 1em 0em;
+  display: inline-block;
+  width: 80%;
+  color: black;
+  text-decoration: none;
+}
+
+.welcome h1 {
+  padding: 1em 0em;
+  margin: 0 auto;
+  color: #694400;
+}
+
+.welcome--text {
+  padding: 0.3em 0em;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 3em;
+  font-size: 1.2em;
+}
+
+/* mobile xl */
+@media screen and (max-width: 540px) {
+  h1 {
+    font-size: 1.7em;
+  }
+}
