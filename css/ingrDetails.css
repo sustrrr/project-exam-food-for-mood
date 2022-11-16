@@ -27,6 +27,11 @@
 
 .recipe--container h1 {
   text-align: center;
+  text-transform: lowercase;
+}
+
+.recipe--container h1:first-letter {
+  text-transform: uppercase;
 }
 
 .recipe--container h2 {

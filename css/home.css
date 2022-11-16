@@ -50,6 +50,7 @@
 }
 
 .card {
+  padding-bottom: 2em;
   flex: 1 0 28%;
   background-color: rgb(255, 255, 255);
   text-align: left;
@@ -64,6 +65,7 @@
   display: flex;
   flex-direction: column;
   min-height: 2em; /*here*/
+  min-height: 50%;
 }
 
 .card h2 {

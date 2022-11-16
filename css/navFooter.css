@@ -45,7 +45,7 @@ nav {
 
 .ham {
   display: none;
-  box-shadow: 0px 0px 0px 0px #d1d1d1;
+  background-color: rgb(255, 255, 255);
 }
 
 .navbar {
