@@ -77,7 +77,7 @@ h1 {
   box-shadow: 0px 0px 1px 0px #000000;
 }
 
-.test::after {
+.arrow::after {
   content: "⌄";
   position: relative;
   background: transparent;
@@ -225,6 +225,17 @@ h1 {
 
 /* mobile xl */
 @media screen and (max-width: 600px) {
+  .arrow::after {
+    content: "⌄";
+    position: relative;
+    background: transparent;
+    display: inline;
+    left: 60%;
+    top: -1.5em;
+    font-size: 1.5em;
+    pointer-events: none; /* let clicks go through */
+  }
+
   .cards--recipes {
     grid-gap: 3.7em;
     flex-direction: column;
@@ -244,6 +255,17 @@ h1 {
 
 /* mobile */
 @media screen and (max-width: 414px) {
+  .arrow::after {
+    content: "⌄";
+    position: relative;
+    background: transparent;
+    display: inline;
+    left: 90%;
+    top: -1.5em;
+    font-size: 1.5em;
+    pointer-events: none; /* let clicks go through */
+  }
+
   .filter {
     flex-direction: column;
     margin-bottom: 7em;
