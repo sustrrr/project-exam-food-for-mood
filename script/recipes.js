@@ -1,5 +1,5 @@
 const baseUrl =
-  "https://api.spoonacular.com/recipes/complexSearch?apiKey=4bb467ba21c74a11969ebfe322813867&number=21";
+  "https://api.spoonacular.com/recipes/complexSearch?apiKey=fe37e55accd7477e96bb6e2108eeaee4&number=21";
 
 const cardContainer = document.querySelector(".cards--recipes"); //card countainer
 const searchButton = document.querySelector("#search-submit");
@@ -47,11 +47,9 @@ function searchVal(a) {
   }
 
   document.getElementById("search-box").value = val;
-  console.log(val);
 }
 
 searchVal();
-console.log(searchVal());
 
 // search
 

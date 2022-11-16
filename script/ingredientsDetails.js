@@ -1,5 +1,5 @@
 const baseUrl =
-  "https://api.spoonacular.com/food/ingredients/search?apiKey=4bb467ba21c74a11969ebfe322813867&query=";
+  "https://api.spoonacular.com/food/ingredients/search?apiKey=fe37e55accd7477e96bb6e2108eeaee4&query=";
 
 const heading = document.querySelector(".recipe--time");
 const image = document.querySelector(".recipe--details--img");
@@ -20,7 +20,7 @@ async function details() {
     const response = await fetch(
       "https://api.spoonacular.com/food/ingredients/" +
         id +
-        "/information?apiKey=4bb467ba21c74a11969ebfe322813867&amount=1",
+        "/information?apiKey=fe37e55accd7477e96bb6e2108eeaee4&amount=1",
       {
         headers: {
           "Content-Type": "application/json",

@@ -1,8 +1,8 @@
 const baseUrl =
-  "https://api.spoonacular.com/recipes/complexSearch?apiKey=4bb467ba21c74a11969ebfe322813867";
+  "https://api.spoonacular.com/recipes/complexSearch?apiKey=fe37e55accd7477e96bb6e2108eeaee4";
 
 const popularUrl =
-  "https://api.spoonacular.com/recipes/complexSearch?apiKey=4bb467ba21c74a11969ebfe322813867&sort=popularity";
+  "https://api.spoonacular.com/recipes/complexSearch?apiKey=fe37e55accd7477e96bb6e2108eeaee4&sort=popularity";
 
 const mealPlannerContainer = document.querySelector(".cards--recipes");
 const popularRecipes = document.querySelector(".popular");
@@ -11,7 +11,6 @@ async function getRecipe(url) {
   const response = await fetch(url);
   const products = await response.json();
   const results = products.results.slice(0, 7);
-  console.log(results);
 
   mealPlannerContainer.innerHTML = "";
 
@@ -28,7 +27,6 @@ async function getPopular(url) {
   const response = await fetch(url);
   const products = await response.json();
   const results = products.results.slice(0, 3); //slice
-  console.log(results);
 
   popularRecipes.innerHTML = "";
 

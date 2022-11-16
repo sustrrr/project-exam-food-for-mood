@@ -43,11 +43,10 @@ h1 {
 }
 
 h2 {
-  font-size: 1.8em;
-  color: #956a13;
-  font-family: "Roboto Flex", sans-serif;
-  text-align: center;
-  margin: 0 auto;
+  margin-bottom: 3em;
+  color: rgb(83, 131, 83) !important;
+  font-weight: bold;
+  font-family: "Roboto Condensed";
 }
 
 h1,

@@ -7,6 +7,12 @@
   text-align: center;
 }
 
+h1 {
+  font-family: "Oswald", sans-serif;
+  color: #794e00;
+  -webkit-text-stroke: 0.5px #f8f8f8;
+}
+
 .recipe--details--img img {
   width: 67%;
   margin: 0 auto;

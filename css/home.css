@@ -28,6 +28,10 @@
 
 .home h2 {
   margin-bottom: 3em;
+  color: rgb(83, 131, 83) !important;
+  font-weight: bold;
+  font-family: "Roboto Condensed";
+  text-align: center;
 }
 
 .popular {
@@ -54,10 +58,10 @@
   flex: 1 0 28%;
   background-color: rgb(255, 255, 255);
   text-align: left;
-  border-radius: 1em;
   overflow: hidden;
   max-width: calc(28% - 1em); /*this*/
-  box-shadow: 0px 0px 3px 0px #cacaca;
+  border-radius: 0.5em;
+  box-shadow: 0px 0px 1px 0px #939393;
 }
 
 .card--text {
@@ -72,9 +76,11 @@
   margin: 1.7em 0em;
   text-align: left;
   line-height: 1.3em;
-  color: black;
+  color: #405033;
+  font-weight: bold;
   font-size: 1.3em; /*here*/
   text-transform: lowercase;
+  font-family: "Roboto Condensed";
 }
 
 .card h2::first-letter {
@@ -90,27 +96,29 @@
 }
 
 .card--button {
-  padding: 1em 2em;
+  padding: 1em 1em;
   border-radius: 1em;
   display: inline-block;
   font-weight: bold;
-  font-size: 0.8em; /*here*/
-  color: white;
-  background-color: #863200;
+  font-size: 0.9em;
+  color: #5b7048;
+  background-color: #ffffff;
+  margin-top: auto;
+  border: 0.2em solid #9db787;
 }
 
 .day {
-  margin-left: 1em;
   position: absolute;
   display: inline-block;
   padding: 0.5em 1em;
   font-size: 1.2em;
   background-color: #ffffff;
   border-top: 0em;
+  border-radius: 0em 0em 1em 0em;
 }
 
 .day p {
-  color: #685c00;
+  color: #000000;
 }
 
 /* mealplanner */
@@ -137,11 +145,10 @@
 .star {
   position: absolute;
   padding: 0.7em 1em;
-  margin: 0em 1em;
-  -webkit-text-stroke: 0.1em rgba(0, 0, 0, 0.353);
-  color: rgb(247, 194, 0);
+  color: rgb(0, 0, 0);
   font-size: 1em;
-  background-color: #444444;
+  background-color: #ffffff;
+  border-radius: 0em 0em 1em 0em;
 }
 
 /* button */

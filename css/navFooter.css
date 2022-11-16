@@ -8,7 +8,7 @@ nav {
   width: 100%;
   z-index: 200;
   padding: 0.2em 0em;
-  box-shadow: 0px 0px 5px 0px #4e4e4e;
+  box-shadow: 0px 0px 1px 0px #2c2c2c;
 }
 
 .navbox {
@@ -27,6 +27,7 @@ nav {
 }
 
 .logo {
+  font-family: "roboto flex";
   display: inline-block;
   text-decoration: none;
   padding-right: 1.3em;
@@ -66,7 +67,7 @@ nav {
   padding: 1em 3em;
   color: #000000;
   letter-spacing: 0.1em;
-  font-family: "Roboto Flex", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: lighter;
 }
 
@@ -125,7 +126,7 @@ footer {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  color: white;
+  color: white !important;
   font-size: 1.2em;
 }
 
@@ -139,7 +140,7 @@ footer {
   font-size: 2em;
   border-bottom: 0px;
   line-height: 1.5em;
-  color: white;
+  color: white !important;
 }
 
 .footer--newsletter input {
