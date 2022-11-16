@@ -1,8 +1,8 @@
 const baseUrl =
-  "https://api.spoonacular.com/recipes/complexSearch?apiKey=fe37e55accd7477e96bb6e2108eeaee4";
+  "https://api.spoonacular.com/recipes/complexSearch?apiKey=66953b50279b4b71981586a42dead42c";
 
 const popularUrl =
-  "https://api.spoonacular.com/recipes/complexSearch?apiKey=fe37e55accd7477e96bb6e2108eeaee4&sort=popularity";
+  "https://api.spoonacular.com/recipes/complexSearch?apiKey=66953b50279b4b71981586a42dead42c&sort=popularity";
 
 const mealPlannerContainer = document.querySelector(".cards--recipes");
 const popularRecipes = document.querySelector(".popular");
