@@ -1,7 +1,8 @@
 const baseUrl =
-  "https://api.spoonacular.com/recipes/complexSearch?apiKey=66953b50279b4b71981586a42dead42c&number=21";
+  "https://api.spoonacular.com/recipes/complexSearch?apiKey=fe37e55accd7477e96bb6e2108eeaee4&number=30";
 
-const cardContainer = document.querySelector(".cards--recipes"); //card countainer
+const cardmobile = document.querySelector(".none");
+const carddesktop = document.querySelector(".show"); //card countainer
 const searchButton = document.querySelector("#search-submit");
 
 //filter
@@ -13,51 +14,93 @@ async function getRecipe(url) {
   const response = await fetch(url);
   const products = await response.json();
   const results = products.results;
-  cardContainer.innerHTML = "";
-  results.forEach(function (result) {
-    cardContainer.innerHTML += `
-    <div class="card">
-        <a href="recipesDetails.html?id=${result.id}">
-          <img src="${result.image}" alt="Picture of ${result.title}"/>
-          <div class="card--text">
-            <h2>${result.title}</h2>
-          <div class="card--button--container">
-            <div class="card--button"> View recipe </div>
-          </div>
-        </div>
-      </a>
-    </div>`;
-  });
+  cardmobile.innerHTML = "";
+  carddesktop.innerHTML = "";
+
+  console.log(url);
+
   if (results.length === 0) {
-    cardContainer.innerHTML = `<h2>No search result</h2>`;
+    cardmobile.innerHTML = `<h2>No search result</h2>`;
+    carddesktop.innerHTML = `<h2>No search result</h2>`;
   }
+
+  function myFunction(x) {
+    if (x.matches) {
+      // If media query matches
+      carddesktop.innerHTML = "";
+      results.forEach(function (result) {
+        cardmobile.innerHTML += `
+      <div class="card">
+          <a href="recipesDetails.html?id=${result.id}">
+            <img src="${result.image}" alt="Picture of ${result.title}"/>
+            <div class="card--text">
+              <h2>${result.title}</h2>
+            <div class="card--button--container">
+            <div class="card--button"> View recipe </div>
+            </div>
+          </div>
+        </a>
+      </div>`;
+      });
+    } else {
+      cardmobile.innerHTML = "";
+      results.forEach(function (result) {
+        carddesktop.innerHTML += `
+      <div class="card">
+          <a href="recipesDetails.html?id=${result.id}">
+            <img src="${result.image}" alt="Picture of ${result.title}"/>
+            <div class="card--text">
+              <h2>${result.title}</h2>
+            <div class="card--button--container">
+              <div class="card--button"> View recipe </div>
+            </div>
+          </div>
+        </a>
+      </div>`;
+      });
+    }
+  }
+
+  var x = window.matchMedia("(max-width: 1030px)");
+  myFunction(x); // Call listener function at run time
+  x.addListener(myFunction); // Attach listener function on state changes
 }
 
 getRecipe(baseUrl);
-
-///adds comma
-function searchVal(a) {
-  var val = document.getElementById("search-box").value;
-
-  if (typeof val === "string") {
-    const arr = val.split(" ").join(",");
-    val = arr;
-  } else {
-    console.log("str is not a string");
-  }
-
-  document.getElementById("search-box").value = val;
-}
-
-searchVal();
 
 // search
 
 searchButton.onclick = function () {
   const searchInput = document.querySelector("#search-box").value;
   const z = baseUrl + `&includeIngredients=${searchInput}`;
-  cardContainer.innerHTML = "";
+  cardmobile.innerHTML = "";
   getRecipe(z);
+
+  var val = document.getElementById("search-box").value;
+
+  var string = "Welcome to,,    LinuxHint";
+  var regexPattern = /\s+/g;
+  var ans = string.replace(regexPattern, " ");
+  console.log(string);
+  console.log(ans);
+
+  document.querySelector("#all").click();
+  document.querySelector("#sort").value = "";
+
+  if (typeof val === "string") {
+    /*var commaPattern = /\,/g;
+    var comma = val.replace(commaPattern, " ");*/
+    const comma = val.split(",").join("");
+    const remove = comma.split(".").join("");
+    var regexPattern = /\s+/g;
+    var ans = remove.replace(regexPattern, " ");
+    const arr = ans.split(" ").join(",");
+    val = arr;
+  } else {
+    console.log("str is not a string");
+  }
+
+  document.getElementById("search-box").value = val;
 };
 
 document
@@ -76,33 +119,102 @@ perPage.onchange = function (event) {
     baseUrl +
     `&includeIngredients=${input}` +
     `&intolerances=${event.target.value}`;
-  cardContainer.innerHTML = "";
+  console.log(z);
+  cardmobile.innerHTML = "";
   getRecipe(z);
 };
+
+let v = "";
 
 populraity.onchange = function (event) {
   const input = document.querySelector("#search-box").value;
   const intolerances = document.querySelector("#intolerance").value;
+
   const z =
     baseUrl +
     `&includeIngredients=${input}` +
     `&intolerances=${intolerances}` +
-    `&sort=${event.target.value}`;
-  cardContainer.innerHTML = "";
+    `&sort=${event.target.value}` +
+    `&type=${v}`;
+  console.log(z);
+  cardmobile.innerHTML = "";
   getRecipe(z);
 };
 
-type.onchange = function (event) {
+/*** MEAL TYPES */
+
+let z;
+
+function general() {
   const input = document.querySelector("#search-box").value;
   const intolerances = document.querySelector("#intolerance").value;
   const sort = document.querySelector("#sort").value;
-  const mealType = document.querySelector("#meal-type").value;
-  const z =
+
+  z =
     baseUrl +
     `&includeIngredients=${input}` +
     `&intolerances=${intolerances}` +
     `&sort=${sort}` +
-    `&type=${mealType}`;
-  cardContainer.innerHTML = "";
+    `&type=${v}`;
+
+  //v = "j";
+  console.log(z);
   getRecipe(z);
+}
+
+function empty() {
+  v = "";
+  general();
+}
+
+function maincourse() {
+  v = "main+course";
+  general();
+}
+
+function dessert() {
+  v = "dessert";
+  general();
+}
+
+function appetizer() {
+  v = "appetizer";
+  general();
+}
+
+function breakfast() {
+  v = "breakfast";
+  general();
+}
+
+function salad() {
+  v = "salad";
+  general();
+}
+
+function beverage() {
+  v = "beverage";
+  general();
+}
+
+function snack() {
+  v = "snack";
+  general();
+}
+
+general();
+
+//from index search
+const json = localStorage.getItem("form");
+const obj = JSON.parse(json); //converting it back to object
+console.log(obj);
+console.log(obj.firstname);
+
+window.onload = function () {
+  if (obj.firstname) {
+    document.getElementById("search-box").value = `${obj.firstname}`;
+    searchButton.click();
+  }
+
+  localStorage.clear();
 };

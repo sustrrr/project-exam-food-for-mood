@@ -14,7 +14,8 @@ body {
 }
 
 body {
-  background-color: #f8f8f8;
+  background-color: #efefef;
+  background-color: #d3d3d3;
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -27,26 +28,28 @@ body {
 .container {
   max-width: 100%;
   margin: 0 auto;
+  padding-top: 1em;
+  margin-top: 3.3em;
 }
 
 .smaller--container {
-  padding: 7em 0em;
+  padding: 3em 0em;
   width: 80%;
 }
 
 /* fonts */
 
 h1 {
-  font-size: 2.3em;
-  color: #794e00;
-  font-family: "Oswald", sans-serif;
+  font-size: 1.7em;
+  font-weight: lighter;
+  font-family: "domine", sans-serif;
 }
 
 h2 {
-  margin-bottom: 3em;
+  margin-bottom: 1em;
   color: rgb(83, 131, 83) !important;
   font-weight: bold;
-  font-family: "Roboto Condensed";
+  font-family: "domine";
 }
 
 h1,
@@ -55,7 +58,7 @@ h2 {
 }
 
 p {
-  font-family: "Roboto", sans-serif;
+  font-family: "source sans pro", sans-serif;
 }
 
 p,
@@ -73,12 +76,14 @@ a {
 }
 
 .logo {
-  font-family: "Roboto", sans-serif;
-  letter-spacing: 0em;
+  font-family: "satisfy";
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #355c2b;
 }
 
 .card h2 {
-  font-family: "Roboto Flex", sans-serif;
+  font-family: "inter", sans-serif;
   font-weight: lighter;
 }
 
@@ -89,24 +94,9 @@ a {
   border: 0.1em solid #65a236;
   padding: 1em 0em;
   display: inline-block;
-  width: 80%;
+  /*width: 80%;*/
   color: black;
   text-decoration: none;
-}
-
-.welcome h1 {
-  padding: 1em 0em;
-  margin: 0 auto;
-  color: #694400;
-}
-
-.welcome--text {
-  padding: 0.3em 0em;
-  width: 50%;
-  margin: 0 auto;
-  text-align: center;
-  line-height: 3em;
-  font-size: 1.2em;
 }
 
 /* mobile xl */

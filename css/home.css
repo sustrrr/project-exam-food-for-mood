@@ -8,30 +8,111 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  height: 67vh;
+  height: 50vh;
+  width: 99%;
+  margin: 0 auto;
+  border-radius: 0.5em;
+  display: flex;
 }
 
-.home--button {
-  padding: 0em 0em;
-  font-weight: bold;
+.glass {
+  background: rgba(0, 0, 0, 0.27);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.3px);
+  -webkit-backdrop-filter: blur(5.3px);
+
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  align-self: flex-end;
+  align-items: center;
 }
 
 .welcome--text {
-  margin-bottom: 6em;
+  padding: 0.3em 0em;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 3em;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 5em 0em;
+  width: 50%;
+}
+
+/*serachbos*/
+.searchhome {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1em 0em 2em 0em;
+}
+
+.searchhome form {
+  width: 100%;
+}
+
+.searchhome input {
+  width: 100%;
+  padding: 1.5em;
+  border: none;
+  border-radius: 0.5em;
+}
+
+.searchhome p {
+  padding: 0em 0.3em;
+  font-size: 2em;
+  color: rgb(208, 208, 208);
+}
+
+.searchhome input::placeholder {
+  font-size: 1.1em;
+}
+
+.home--button {
+  padding: 0em 0.7em;
+  border-radius: 0.3em;
+  margin: 0 auto;
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-family: "source sans pro";
+  font-weight: bold;
+  font-size: 0.6em;
+  letter-spacing: 0em !important;
+  border: 0.1em solid white;
+}
+
+.welcome--text h1 {
+  color: #b19961;
+  font-weight: 600;
+  padding: 0.5em 0em;
+  margin: 0 auto;
+  font-family: "domine", sans-serif;
+  color: #ffebbd;
+  font-size: 1.2em;
+}
+
+.meal-planner {
+  width: 99%;
+  border-radius: 0.5em;
+  padding-top: 1em;
+  margin-top: 5em;
 }
 
 .heading-two {
-  color: #794e00;
+  color: #ffebbd;
 }
 
 /* cards recipies */
 
 .home h2 {
-  margin-bottom: 3em;
-  color: rgb(83, 131, 83) !important;
-  font-weight: bold;
-  font-family: "Roboto Condensed";
+  margin-bottom: 2em;
+  color: #665b41 !important;
+  font-size: 1.2em;
   text-align: center;
+  font-family: "domine", sans-serif;
+  font-weight: bold;
 }
 
 .popular {
@@ -40,10 +121,10 @@
 
 /* cards */
 .cards--recipes {
-  width: 77%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
-  grid-gap: 3.7em;
+  grid-gap: 1em;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
@@ -52,22 +133,20 @@
 .card:last-child {
   margin: 0 auto;
 }
-
 .card {
-  padding-bottom: 2em;
-  flex: 1 0 28%;
-  background-color: rgb(255, 255, 255);
+  flex: 1 0 30%; /*same*/
+  background-color: #e8e8e8;
   text-align: left;
   overflow: hidden;
-  max-width: calc(28% - 1em); /*this*/
+  max-width: calc(30% - 1em); /*this*/
   border-radius: 0.5em;
-  box-shadow: 0px 0px 1px 0px #939393;
+  box-shadow: 0px 0px 0.5px 0px #939393;
 }
 
 .card--text {
   padding: 0em 1.7em 3em 1.7em;
-  display: flex;
-  flex-direction: column;
+  /*display: flex;
+  flex-direction: column;*/
   min-height: 2em; /*here*/
   min-height: 50%;
 }
@@ -76,11 +155,11 @@
   margin: 1.7em 0em;
   text-align: left;
   line-height: 1.3em;
-  color: #405033;
-  font-weight: bold;
-  font-size: 1.3em; /*here*/
+  color: #608960 !important;
+  font-size: 0.9em; /*here*/
   text-transform: lowercase;
-  font-family: "Roboto Condensed";
+  font-family: "inter";
+  font-weight: bold;
 }
 
 .card h2::first-letter {
@@ -89,29 +168,30 @@
 
 .card img {
   width: 140%;
+  filter: sepia(1) brightness(8) hue-rotate(1);
 }
 
 .card--button--container {
-  margin-top: auto;
+  margin-top: 0.2em;
 }
 
 .card--button {
-  padding: 1em 1em;
-  border-radius: 1em;
+  padding: 0.2em 0em;
+  border-radius: 0em;
   display: inline-block;
-  font-weight: bold;
-  font-size: 0.9em;
-  color: #5b7048;
-  background-color: #ffffff;
+  font-family: "inter";
+  font-size: 0.8em;
+  color: #9d9d9d !important;
   margin-top: auto;
-  border: 0.2em solid #9db787;
+  background-color: #e8e8e8;
+  border: none;
 }
 
 .day {
   position: absolute;
   display: inline-block;
   padding: 0.5em 1em;
-  font-size: 1.2em;
+  font-size: 1em;
   background-color: #ffffff;
   border-top: 0em;
   border-radius: 0em 0em 1em 0em;
@@ -151,29 +231,33 @@
   border-radius: 0em 0em 1em 0em;
 }
 
-/* button */
+/* see all recipes button */
 .see--more--container {
   width: 100%;
   margin-top: 5em;
+  text-align: center;
 }
 
-.see--more {
-  border: 0.1em solid #65a236;
-  padding: 1em 2em;
-  display: block;
-  width: 30%;
-  color: black;
-  text-decoration: none;
-  text-align: center;
+.see--more--container a {
+  padding: 1em 1em;
+  border-radius: 0.3em;
   margin: 0 auto;
-  font-size: 1.1em;
+  display: inline-block;
+  color: #665b41;
+  text-decoration: none;
+  font-family: "source sans pro";
+  font-weight: bold;
+  font-size: 0.8em;
+  letter-spacing: 0em !important;
+  border: 0.1em solid #665b41;
 }
 
 /* ingredients */
 
 .ingredients {
   width: 100%;
-  background-image: url("../img/welcome.jpg");
+
+  background-image: url("../img/ingredients.jpg");
   image-rendering: -webkit-optimize-contrast;
   image-rendering: pixelated;
   -webkit-background-size: cover;
@@ -182,28 +266,30 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  padding: 8em 0em;
   width: 80%;
   margin-top: 10em;
+  border-radius: 10em;
+}
+
+.ingredients--glass {
+  text-align: center;
+  padding: 3em;
+  background-color: #d3d3d3;
 }
 
 .ingredients--text {
-  background-color: #f8f8f8;
-  padding: 7em 3em;
-  border-radius: 1em;
-  line-height: 1em;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .ingredients--text p {
   font-size: 1em;
-}
-
-.ingredients--text .fas {
-  margin-left: 1em;
+  margin-bottom: 3em;
+  font-weight: bold;
 }
 
 .ingredients--text h2 {
-  margin-bottom: 3em;
+  margin-bottom: 2em;
   line-height: 1.5em;
 }
 
@@ -230,7 +316,7 @@
   }
 
   .card {
-    flex: 1 0 35%;
+    flex: 1 0 25%;
     max-width: calc(35% - 1em); /*this*/
   }
 
@@ -239,12 +325,71 @@
   }
 
   .welcome--text h1 {
-    font-size: 2em;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    padding-top: 5em;
+  }
+
+  .welcome--text h1 {
+    margin-bottom: 0.5em;
+    line-height: 1.5em;
+  }
+
+  .glass {
+    height: 40vh;
+    padding-bottom: 5em;
   }
 }
 
 /* tablet */
 @media screen and (max-width: 900px) {
+  .welcome--text h1 {
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+    line-height: 1.5em;
+  }
+  .glass {
+    width: 100%;
+    padding-bottom: 0em;
+  }
+
+  .welcome--text {
+    width: 85% !important;
+    vertical-align: center;
+    padding: 0em 0em;
+    line-height: 3em;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 0em 0em;
+  }
+
+  /*serachbos*/
+  .searchhome {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1em 0em 2em 0em;
+  }
+
+  .searchhome form {
+    width: 100%;
+  }
+
+  .searchhome input {
+    width: 100%;
+    padding: 1.5em;
+    border: none;
+    border-radius: 0.5em;
+  }
+
+  .searchhome p {
+    padding: 0em 0.3em;
+    font-size: 2em;
+    color: rgb(208, 208, 208);
+  }
+
+  /**/
+
   .cards--recipes {
     width: 100%;
   }
@@ -265,6 +410,14 @@
 
 /* mobile xl */
 @media screen and (max-width: 600px) {
+  .welcome--img {
+    height: 65vh;
+  }
+
+  .glass {
+    height: 50vh;
+  }
+
   .cards--recipes {
     grid-gap: 3.7em;
     width: 90%;
@@ -304,15 +457,64 @@
   }
 
   .welcome--text {
-    width: 70%;
     margin-bottom: 10em;
+    width: 90% !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .welcome--text {
+    padding-top: 3em;
   }
 
   .welcome--text h1 {
-    font-size: 1.3em;
-  }
-
-  .welcome--img {
-    height: 63vh;
+    font-size: 1em;
   }
 }
+
+/* typeee */
+
+.type--category {
+  text-align: center;
+  width: 99%;
+}
+
+.type--category button {
+  border: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+  margin: 2em;
+  font-weight: bold;
+  font-size: 1em;
+  font-family: "source sans pro";
+  background: none;
+}
+
+.maincourse,
+.dessert,
+.breakfast,
+.beverage {
+  display: block;
+  padding: 3.7em;
+  pointer-events: none;
+  cursor: pointer;
+  margin-bottom: 1em;
+  border-radius: 50em;
+
+  background-image: url("../img/welcome.jpg");
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: pixelated;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/*box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);*/

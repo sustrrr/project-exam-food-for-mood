@@ -49,3 +49,20 @@ document
       document.getElementById("search-submit").click();
     }
   });
+
+//from index search
+const json = localStorage.getItem("ingr");
+const obj = JSON.parse(json); //converting it back to object
+console.log(obj);
+console.log(obj.ingr);
+
+window.onload = function () {
+  if (obj.ingr) {
+    const searchInput = (document.querySelector(
+      "#search-box"
+    ).value = `${obj.ingr}`);
+    searchButton.click();
+  }
+
+  localStorage.clear();
+};

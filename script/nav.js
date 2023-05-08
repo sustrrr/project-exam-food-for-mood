@@ -10,18 +10,15 @@ ham.addEventListener("click", toggleHamburger);
 
 const forms = document.querySelector("#newsletter--form");
 const emails = document.querySelector("#email");
-const errors = document.querySelector("#emailNewsletterError");
-const successMessages = document.querySelector(".success_text_newsletter");
+const validate = document.querySelector(".validateemail");
 
 function validateNewsletter(event) {
   event.preventDefault();
 
   if (validateEmails(emails.value) === true) {
-    errors.style.display = "none";
-    successMessages.style.display = "block";
-    emails.value = "";
+    validate.innerHTML = `<p class="success">You are signed up</p>`;
   } else {
-    errors.style.display = "block";
+    validate.innerHTML = `<p class="error">Please provide an email</p>`;
   }
 }
 

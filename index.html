@@ -12,12 +12,22 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;700&family=Roboto+Flex:opsz,wght@8..144,400;8..144,500&family=Roboto:wght@500&family=Roboto+Condensed:wght@400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@600&family=Inter:wght@200;300;400;500;600&family=Niconne&family=Pragati+Narrow:wght@400;700&family=Roboto+Condensed:wght@400;700&family=Rokkitt&family=Satisfy&display=swap"
       rel="stylesheet"
     />
+
+    <!--
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;700&family=Roboto+Flex:opsz,wght@8..144,400;8..144,500&family=Roboto:wght@500&family=Roboto+Condensed:wght@400&display=swap"
+      rel="stylesheet"
+    />-->
     <title>Good Food Mood | Home</title>
     <link href="css/navFooter.css" rel="stylesheet" />
     <link href="css/index.css" rel="stylesheet" />
@@ -28,15 +38,17 @@
       <nav>
         <div class="navbox">
           <div class="logobox">
-            <a class="logo" href="index.html">Good food <span>mood</span></a>
+            <a class="logo" href="index.html">Good food mood</a>
           </div>
           <div class="navbar">
             <ul>
-              <li><a class="menuLink" href="recipes.html">Recipes</a></li>
-              <li><a class="menuLink" href="#newsletter">Newsletter</a></li>
               <li>
+                <a class="menuLink" href="recipes.html">Recipes</a>
+              </li>
+              <li class="sh">
                 <a class="menuLink" href="ingredients.html">Ingredients</a>
               </li>
+              <li><a class="menuLink" href="#newsletter">Newsletter</a></li>
               <li>
                 <a class="menuLink" href="contactAbout.html">About & contact</a>
               </li>
@@ -49,64 +61,93 @@
       </nav>
 
       <div class="container">
-        <div class="welcome">
-          <div class="welcome--img home"></div>
-          <div class="welcome--text">
-            <h1>We have collected over 1,000 food recipes</h1>
-            <a href="recipes.html">
-              <div class="main--button home--button">
-                <p>See them all</p>
+        <div class="welcome welcome-wrap">
+          <div class="welcome--img home">
+            <div class="glass">
+              <div class="welcome--text">
+                <h1>We have collected over 1,000 food recipes</h1>
+                <div class="searchhome">
+                  <form>
+                    <input
+                      type="text"
+                      name="firstname"
+                      placeholder="Search recipes..."
+                    />
+                  </form>
+                  <p><i class="fas fa-search"></i></p>
+                </div>
+                <a href="recipes.html" class="home--button">
+                  Advanced search
+                </a>
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="container smaller--container home meal-planner">
-        <h2 class="heading-two">Weekly meal planner</h2>
-        <div class="cards--recipes mealplanner">
-          <p class="loading">Loading recipes...</p>
+
+      <div class="type--category smaller--container home">
+        <h2 class="heading-two">Popular categories</h2>
+        <button name="valuecat" value="main+course" onclick="storeValue(event)">
+          <span class="maincourse"></span>
+          Main+course
+        </button>
+        <button name="valuecat" value="dessert" onclick="storeValue(event)">
+          <span class="dessert"></span>
+          Dessert
+        </button>
+        <button name="valuecat" value="breakfast" onclick="storeValue(event)">
+          <span class="breakfast"></span>
+          Breakfast
+        </button>
+        <button name="valuecat" value="beverage" onclick="storeValue(event)">
+          <span class="beverage"></span>
+          Beverage
+        </button>
+      </div>
+    </div>
+
+    <!--
+    <div class="container smaller--container home meal-planner">
+      <h2 class="heading-two">Weekly meal planner</h2>
+      <div class="cards--recipes mealplanner">
+        <p class="loading">Loading recipes...</p>
+      </div>
+    </div>
+-->
+
+    <div class="container smaller--container home popular-recipes">
+      <h2 class="heading-two">Most popular recipes</h2>
+      <div class="cards--recipes popular">
+        <p class="loading">Loading recipes...</p>
         </div>
       </div>
-      <div class="container smaller--container home popular-recipes">
-        <h2 class="heading-two">Most popular recipes</h2>
-        <div class="cards--recipes popular">
-          <p class="loading">Loading recipes...</p>
-        </div>
-        <div class="see--more--container">
-          <a href="recipes.html">
-            <div class="see--more">
-              <p>See all the recipes</p>
-            </div>
-          </a>
-        </div>
+      <div class="see--more--container">
+        <a href="recipes.html"> See all the recipes </a>
       </div>
-      <div class="container smaller--container home ingredients">
+    </div>
+    <!--
+    <div class="container smaller--container home ingredients">
+      <div class="ingredients--glass">
         <div class="ingredients--text">
           <h2>Do you need to know more about different ingredients?</h2>
-          <div class="see--more--container">
-            <a href="ingredients.html">
-              <div class="see--more ingredients-button">
-                <p>
-                  Try our ingredients searcher
-                  <i class="fas fa-arrow-right"></i>
-                </p>
-              </div>
-            </a>
+          <p>Search for an ingredient</p>
+          <div class="searchhome h">
+            <form class="ingr">
+              <input
+                type="text"
+                name="ingr"
+                placeholder="Search ingredient..."
+              />
+              <p><i class="fas fa-search"></i></p>
+            </form>
           </div>
         </div>
       </div>
     </div>
+    -->
 
     <footer>
       <div class="container">
-        <div class="footer--info">
-          <p>At Good food mood you can search for over 1,000 recipes!</p>
-          <a href="contactAbout.html">
-            <div class="main--button">
-              <p>Read more about us</p>
-            </div>
-          </a>
-        </div>
         <div class="footer--newsletter" id="newsletter">
           <h2>Sign up for our newsletter</h2>
           <p>Get our newest recipes in your inbox!</p>
@@ -116,11 +157,8 @@
               id="email"
               placeholder="Your email..."
             />
-            <div class="form-error" id="emailNewsletterError">
-              Please enter a valid email address
-            </div>
-            <div class="success_text_newsletter">
-              <p>You are signed up for our newsletters!</p>
+            <div class="validateemail">
+              <p class="hide">validate email</p>
             </div>
             <button>Sign up</button>
           </form>
@@ -134,12 +172,14 @@
             <a href="ingredients.html">Ingredients</a>
             <a href="contactAbout.html">About & contact</a>
           </div>
+
+          <div class="footer" id="newsletter"></div>
+
           <div class="footer--social">
             <h3>Follow us on</h3>
             <i class="fab fa-facebook-f"></i>
             <i class="fab fa-instagram"></i>
           </div>
-          <div class="footer" id="newsletter"></div>
         </div>
       </div>
     </footer>

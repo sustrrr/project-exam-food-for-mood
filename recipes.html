@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="Good Food Mood  | Recipe page of Good Food Mood, here you can search for food recipes. At Good Food Mood you can search for over 1,000 food recipes by ingredients! You can also search for different ingredients to get to know more about them." />
-      
-      <link
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-        rel="stylesheet"
-      />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;700&family=Roboto+Flex:opsz,wght@8..144,400;8..144,500&family=Roboto:wght@300&family=Roboto+Condensed:wght@400&display=swap"
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Good Food Mood  | Recipe page of Good Food Mood, here you can search for food recipes. At Good Food Mood you can search for over 1,000 food recipes by ingredients! You can also search for different ingredients to get to know more about them."
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
       rel="stylesheet"
     />
-      <title>Good Food Mood  | Recipes</title>
-      <link href="css/navFooter.css" rel="stylesheet" />
-      <link href="css/index.css" rel="stylesheet" />
-      <link href="css/recipes.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@600&family=Inter:wght@200;300;400;500;600&family=Niconne&family=Pragati+Narrow:wght@400;700&family=Roboto+Condensed:wght@400;700&family=Rokkitt&family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <title>Good Food Mood | Recipes</title>
+    <link href="css/navFooter.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/recipes.css" rel="stylesheet" />
   </head>
   <body>
     <div class="wrapper">
       <nav>
         <div class="navbox">
           <div class="logobox">
-            <a class="logo" href="index.html">Good food <span>mood</span></a>
+            <a class="logo" href="index.html">Good food mood</a>
           </div>
           <div class="navbar">
             <ul>
-              <li><a class="menuLink active" href="recipes.html">Recipes</a></li>
+              <li>
+                <a class="menuLink active" href="recipes.html">Recipes</a>
+              </li>
               <li><a class="menuLink" href="#newsletter">Newsletter</a></li>
               <li>
                 <a class="menuLink" href="ingredients.html">Ingredients</a>
@@ -45,81 +50,166 @@
         </div>
       </nav>
 
-        <div class="welcome">
-          <div class="welcome--img recipe--welcome--img"></div>
-          <div class="welcome--text">
-            <h1>Recipes</h1>
-          </div>
-        </div>
-      <div class="container">
-
-      <div class="container smaller--container search--container">
-        <div class="search">
-          <input id="search-box" placeholder="Search by ingridients ..." 
-          onkeyup="searchVal()"
-          />
-          <button id="search-submit"><i class="fas fa-search"></i></button>
+      <div class="welcome container">
+        <div class="welcome--img recipe--welcome--img"></div>
+        <div class="welcome--text">
+          <h1>Front page > Recipes</h1>
         </div>
       </div>
 
-      <div class="container smaller--container filter--recipe--container">
-        <div class="filter">
-          <div class="per-page">
-            <label for="">Intolerance</label>
-            <div class="arrow">
-            <select class="per-page-selection" id="intolerance">
-              <option value="" disabled selected value class="disabled-option"></option>
-              <option value="">None</option>
-              <option value="gluten" class="test">Gluten</option>
-              <option value="grain">Grain</option>
-              <option value="peanut">Peanut</option>
-              <option value="dairy">Dairy</option>
-              <option value="egg">Egg</option>
-              <option value="seafood">Seafood</option>
-              <option value="sesame">Sesame</option>
-              <option value="shellfish">Shellfish</option>
-              <option value="soy">Soy</option>
-              <option value="sulfite">Sulfite</option>
-              <option value="tree+nut">Tree Nut</option>
-              <option value="wheat">Wheat</option>
-            </select>
-          </div>
+      <div class="flextest">
+        <div class="search--container">
+          <div class="search">
+            <input
+              id="search-box"
+              placeholder="Search by ingridients ..."
+              onkeyup="searchVal()"
+            />
+            <button id="search-submit"><i class="fas fa-search"></i></button>
           </div>
 
-          <div class="populraity">
-            <label for="">Sort by</label>
-            <div class="arrow">
-            <select class="per-page-selection" id="sort">
-              <option value="" disabled selected value class="disabled-option"></option>
-              <option value="">None</option>
-              <option value="popularity">Popularity</option>
-              <option value="random">Newest</option>
-              <option value="time">Cooking time</option>
-              <option value="price">Price</option>
-            </select>
+          <div class="cards--recipes show">
+            <p class="loading">Loading recipes...</p>
           </div>
-          </div>
+        </div>
 
-          <div class="meal-type">
-            <label for="">Meal type</label>
-            <div class="arrow">
-            <select class="per-page-selection" id="meal-type">
-              <option value="" disabled selected value class="disabled-option"></option>
-              <option value="">None</option>
-              <option value="main+course">Main course</option>
-              <option value="dessert">Dessert</option>
-              <option value="appetizer">Appetizer</option>
-              <option value="breakfast">Breakfast</option>
-              <option value="salad">Salad</option>
-              <option value="beverage">Beverage</option>
-              <option value="sauce">Sauce</option>
-              <option value="snack">Snack</option>
-            </select>
+        <div class="filter--recipe--container" id="recipecontainer">
+          <div class="filter">
+            <div class="selectflex">
+              <div class="per-page">
+                <label for="">Intolerance</label>
+                <div class="arrow">
+                  <select class="per-page-selection" id="intolerance">
+                    <option
+                      value=""
+                      disabled
+                      selected
+                      value
+                      class="disabled-option"
+                    ></option>
+                    <option value="">None</option>
+                    <option value="gluten" class="test">Gluten</option>
+                    <option value="grain">Grain</option>
+                    <option value="peanut">Peanut</option>
+                    <option value="dairy">Dairy</option>
+                    <option value="egg">Egg</option>
+                    <option value="seafood">Seafood</option>
+                    <option value="sesame">Sesame</option>
+                    <option value="shellfish">Shellfish</option>
+                    <option value="soy">Soy</option>
+                    <option value="sulfite">Sulfite</option>
+                    <option value="tree+nut">Tree Nut</option>
+                    <option value="wheat">Wheat</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="populraity">
+                <label for="">Sort by</label>
+                <div class="arrow">
+                  <select class="per-page-selection" id="sort">
+                    <option
+                      value=""
+                      disabled
+                      selected
+                      value
+                      class="disabled-option"
+                    ></option>
+                    <option value="">None</option>
+                    <option value="popularity">Popularity</option>
+                    <option value="random">Newest</option>
+                    <option value="time">Cooking time</option>
+                    <option value="price">Price</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!--checked-->
+
+            <div class="meal-type">
+              <div class="radio-button">
+                <input
+                  type="radio"
+                  id="all"
+                  name="valuecat"
+                  value=""
+                  checked
+                  onclick="empty(event)"
+                />
+                <label for="all">All</label>
+
+                <input
+                  type="radio"
+                  id="maincourse"
+                  name="valuecat"
+                  value="main+course"
+                  onclick="maincourse(event)"
+                />
+                <label for="maincourse">Main course</label>
+
+                <input
+                  type="radio"
+                  id="dessert"
+                  name="valuecat"
+                  value="dessert"
+                  onclick="dessert(event)"
+                />
+                <label for="dessert">Dessert</label>
+
+                <input
+                  type="radio"
+                  id="appetizer"
+                  name="valuecat"
+                  value="appetizer"
+                  onclick="appetizer(event)"
+                />
+                <label for="appetizer">Appetizer</label>
+
+                <input
+                  type="radio"
+                  id="breakfast"
+                  name="valuecat"
+                  value="breakfast"
+                  onclick="breakfast(event)"
+                />
+                <label for="breakfast">Breakfast</label>
+
+                <input
+                  type="radio"
+                  id="salad"
+                  name="valuecat"
+                  value="salad"
+                  onclick="salad(event)"
+                />
+                <label for="salad">Salad</label>
+
+                <input
+                  type="radio"
+                  id="beverage"
+                  name="valuecat"
+                  value="beverage"
+                  onclick="beverage(event)"
+                />
+                <label for="beverage">Beverage</label>
+
+                <input
+                  type="radio"
+                  id="snack"
+                  name="valuecat"
+                  value="snack"
+                  onclick="snack(event)"
+                />
+                <label for="snack">Snack</label>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="cards--recipes">
+        <div class="cards--recip none"></div>
+
+        <!-- mobile or desktop cards -->
+        <div class="cards--recip none">
           <p class="loading">Loading recipes...</p>
         </div>
       </div>
@@ -127,14 +217,6 @@
 
     <footer>
       <div class="container">
-        <div class="footer--info">
-          <p>At Good food mood you can search for over 1,000 recipes!</p>
-          <a href="contactAbout.html">
-            <div class="main--button">
-              <p>Read more about us</p>
-            </div>
-          </a>
-        </div>
         <div class="footer--newsletter" id="newsletter">
           <h2>Sign up for our newsletter</h2>
           <p>Get our newest recipes in your inbox!</p>
@@ -144,11 +226,8 @@
               id="email"
               placeholder="Your email..."
             />
-            <div class="form-error" id="emailNewsletterError">
-              Please enter a valid email address
-            </div>
-            <div class="success_text_newsletter">
-              <p>You are signed up for our newsletters!</p>
+            <div class="validateemail">
+              <p class="hide">validate email</p>
             </div>
             <button>Sign up</button>
           </form>
@@ -171,6 +250,7 @@
         </div>
       </div>
     </footer>
+    <script src="script/type.js"></script>
     <script src="script/recipes.js"></script>
     <script src="script/nav.js"></script>
   </body>

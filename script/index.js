@@ -1,27 +1,11 @@
 const baseUrl =
-  "https://api.spoonacular.com/recipes/complexSearch?apiKey=66953b50279b4b71981586a42dead42c";
+  "https://api.spoonacular.com/recipes/complexSearch?apiKey=66953b50279b4b71981586a42dead42c&number=60 p";
 
 const popularUrl =
   "https://api.spoonacular.com/recipes/complexSearch?apiKey=66953b50279b4b71981586a42dead42c&sort=popularity";
 
 const mealPlannerContainer = document.querySelector(".cards--recipes");
 const popularRecipes = document.querySelector(".popular");
-
-async function getRecipe(url) {
-  const response = await fetch(url);
-  const products = await response.json();
-  const results = products.results.slice(0, 7);
-
-  mealPlannerContainer.innerHTML = "";
-
-  mealPlanner(results);
-
-  if (results.length === 0) {
-    cardContainer.innerHTML = `<h2>Failed to load recipes</h2>`;
-  }
-}
-
-getRecipe(baseUrl);
 
 async function getPopular(url) {
   const response = await fetch(url);
@@ -53,14 +37,16 @@ async function getPopular(url) {
 
 getPopular(popularUrl);
 
+/*
+
 function mealPlanner(results) {
-  let monday = results[0];
-  let tuesday = results[1];
-  let wednesday = results[2];
-  let thursday = results[3];
-  let friday = results[4];
-  let saturday = results[5];
-  let sunday = results[6];
+  let monday = results[3];
+  let tuesday = results[4];
+  let wednesday = results[5]; //Ok
+  let thursday = results[11]; //ok
+  let friday = results[49]; //ok
+  let saturday = results[51];
+  let sunday = results[51]; //ok
 
   mealPlannerContainer.innerHTML += `
    <div class="card">
@@ -169,3 +155,63 @@ function mealPlanner(results) {
     </div>
     `;
 }
+
+*/
+
+/// collect input
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const fd = new FormData(form);
+  console.log(fd);
+
+  const obj = Object.fromEntries(fd);
+  console.log(obj);
+
+  const json = JSON.stringify(obj);
+  localStorage.setItem("form", json);
+
+  window.location.href = "recipes.html";
+});
+
+/// collect input
+
+const ingr = document.querySelector(".ingr");
+
+ingr.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const fd = new FormData(ingr);
+  console.log(fd);
+
+  const obj = Object.fromEntries(fd);
+  console.log(obj);
+
+  const json = JSON.stringify(obj);
+  localStorage.setItem("ingr", json);
+
+  window.location.href = "ingredients.html";
+});
+
+/// collect type
+
+function storeValue(event) {
+  localStorage.setItem(event.target.name, event.target.value);
+  console.log(event.target.value);
+  window.location.href = "recipes.html";
+}
+
+/*
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+    document.body.style.backgroundColor = "yellow";
+  } else {
+   document.body.style.backgroundColor = "pink";
+  }
+}
+
+var x = window.matchMedia("(max-width: 700px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
+*/

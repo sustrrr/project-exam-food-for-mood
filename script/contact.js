@@ -1,8 +1,6 @@
 const form = document.querySelector("#contactForm");
 const firstName = document.querySelector("#firstName");
 const firstNameError = document.querySelector("#firstNameError");
-const lastName = document.querySelector("#lastName");
-const lastNameError = document.querySelector("#lastNameError");
 const email = document.querySelector("#email-contact");
 const emailError = document.querySelector("#emailError-contact");
 const message = document.querySelector("#message");
@@ -19,12 +17,6 @@ function validateForm(event) {
     firstNameError.style.display = "block";
   }
 
-  if (checkLength(lastName.value, 3) === true) {
-    lastNameError.style.display = "none";
-  } else {
-    lastNameError.style.display = "block";
-  }
-
   if (validateEmail(email.value) === true) {
     emailError.style.display = "none";
   } else {
@@ -39,13 +31,11 @@ function validateForm(event) {
 
   if (
     (checkLength(firstName.value, 0) === true) &
-    (checkLength(lastName.value, 3) === true) &
     (validateEmail(email.value) === true) &
     (checkLength(message.value, 10) === true)
   ) {
     successMessage.style.display = "block";
     firstName.value = "";
-    lastName.value = "";
     email.value = "";
     message.value = "";
   }
