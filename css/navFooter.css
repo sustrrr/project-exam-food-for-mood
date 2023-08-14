@@ -302,7 +302,6 @@ footer {
     display: inline-block;
     padding: 1em 1em;
     color: #000000;
-    letter-spacing: 0.1em;
   }
 
   .footer--newsletter input {
