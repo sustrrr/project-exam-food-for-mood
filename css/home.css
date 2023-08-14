@@ -216,6 +216,81 @@
   color: rgb(201, 201, 201);
 }
 
+/***** FEATURED *****/
+
+.featured-container {
+  display: flex;
+  flex-direction: column;
+  /*background-color: red;*/
+  grid-gap: 0em;
+  text-align: center;
+  align-items: center;
+
+  background-color: #c8c8c8;
+  border-radius: 70% 30% 40% 20%;
+  /* background-color: #485654; */
+
+  width: 90%;
+  margin: 0 auto;
+
+  /* margin-top: 4em; */
+
+  /* padding-top: 5em; */
+  padding-bottom: 3em;
+  position: relative;
+  top: -1em;
+}
+
+.img-boc {
+  overflow: hidden;
+  border-radius: 50em;
+
+  position: relative;
+  top: -4em;
+
+  height: 30vh;
+  width: 30vh;
+}
+
+.img-boc img {
+  width: 100%;
+}
+
+.featured-sticker {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 1em;
+
+  padding: 0em;
+}
+
+.featured-container h2 {
+  font-size: 1.5em;
+  color: #403621 !important;
+  font-weight: lighter;
+}
+
+.featured-container p {
+  color: rgb(49, 49, 49);
+}
+
+.text-f {
+  line-height: 1.3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0em 7em 2em 7em;
+}
+
+.featured-container .buttons {
+  padding: 1.5em;
+  color: rgb(47, 47, 47);
+
+  margin-top: 4em;
+  font-size: 0.8em;
+  font-family: "domine";
+}
+
 /*box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);*/
 
 /* small pc */
@@ -267,6 +342,10 @@
 
 /* tablet */
 @media screen and (max-width: 900px) {
+  .vertical {
+    padding: 5em;
+  }
+
   .welcome--img,
   .glass {
     height: 56vh;
@@ -323,10 +402,60 @@
   .ingredients--text {
     padding: 7em 1em;
   }
+
+  /***** FEATURED *****/
+
+  .featured-container {
+    border-radius: 50% 30% 40% 20%;
+    /* background-color: #485654; */
+
+    width: 97%;
+
+    /* margin-top: 4em; */
+
+    /* padding-top: 5em; */
+    padding-bottom: 0em;
+    position: relative;
+    top: -1em;
+  }
+
+  .img-boc {
+    top: -4em;
+
+    height: 25vh;
+    width: 25vh;
+  }
+
+  .featured-sticker {
+    margin-bottom: 1em;
+    padding: 0em;
+  }
+
+  .featured-container h2 {
+    color: #403621 !important;
+    font-weight: lighter;
+  }
+
+  .text-f {
+    line-height: 1.7em;
+    flex-direction: column;
+    align-items: center;
+    padding: 0em 3em 2em 3em;
+  }
+
+  .featured-container .buttons {
+    padding: 1.5em;
+    margin-top: 2em;
+    font-size: 0.8em;
+  }
 }
 
 /* mobile xl */
 @media screen and (max-width: 600px) {
+  .vertical {
+    padding: 2em;
+  }
+
   .welcome--img,
   .glass {
     height: 65vh;
@@ -371,86 +500,183 @@
   }
 }
 
-@media screen and (max-width: 400px) {
-  .welcome--text h1 {
-    font-size: 1em;
+@media screen and (max-width: 500px) {
+  .welcome--container {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+
+    padding-bottom: 10em;
   }
 
-  .welcome--img,
-  .glass {
+  h1 {
+    font-size: 1.3em !important;
+  }
+
+  .vertical {
+    padding-top: 15em;
+    flex: 1;
     height: 60vh;
   }
+
+  .welcome--img {
+    flex: 1;
+    padding: 10em;
+    margin: 0 auto;
+    display: inline-block;
+  }
+
   .welcome--text {
-    padding-top: 3em;
+    width: 100% !important;
+  }
+
+  /************ CATEGORIES ******/
+
+  /* cards recipies */
+
+  .type--category h2 {
+    margin-bottom: 4em;
+  }
+
+  .type--category {
+    padding: 10em 2em 20em 2em;
+  }
+
+  .type--category-flex {
+    flex-direction: row;
+    grid-gap: 3em;
+  }
+
+  .type--category-flex button {
+    flex: 1 0 30%;
+  }
+
+  .maincourse,
+  .dessert,
+  .breakfast,
+  .beverage {
+    padding: 5em;
+  }
+
+  .title {
+    display: block;
+    font-size: 1em;
+    text-transform: uppercase;
+    margin-top: 1em;
+    font-weight: bold;
+  }
+
+  .buttons {
+    padding: 0.2em 0em;
+    font-size: 0.9em;
+    margin-top: 1em;
+    border-radius: 0.1em;
+    font-weight: lighter;
   }
 }
 
-/**** featured */
+@media screen and (max-width: 414px) {
+  .vertical {
+    padding-top: 20em;
+    flex: 1;
+    height: 80vh;
+  }
 
-.featured-container {
-  display: flex;
-  flex-direction: column;
-  /*background-color: red;*/
-  grid-gap: 0em;
-  text-align: center;
-  align-items: center;
+  h1 {
+    font-size: 1.1em !important;
+  }
 
-  background-color: #c8c8c8;
-  border-radius: 70% 30% 40% 20%;
-  /* background-color: #485654; */
+  h2 {
+    font-size: 1.3em !important;
+  }
 
-  width: 90%;
-  margin: 0 auto;
+  /************ CATEGORIES ******/
 
-  /* margin-top: 4em; */
+  /* cards recipies */
 
-  /* padding-top: 5em; */
-  padding-bottom: 3em;
-  position: relative;
-  top: -1em;
-}
+  .type--category h2 {
+    margin-bottom: 4em;
+  }
 
-.img-boc {
-  overflow: hidden;
-  border-radius: 50em;
+  .type--category {
+    padding: 10em 2em 20em 2em;
+  }
 
-  position: relative;
-  top: -4em;
+  .type--category-flex {
+    flex-direction: row;
+    grid-gap: 3em;
+  }
 
-  height: 30vh;
-  width: 30vh;
-}
+  .type--category-flex button {
+    flex: 1 0 30%;
+  }
 
-.featured-sticker {
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-bottom: 1em;
+  .maincourse,
+  .dessert,
+  .breakfast,
+  .beverage {
+    padding: 4em;
+  }
 
-  padding: 0em;
-}
+  .title {
+    display: block;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    margin-top: 1em;
+    font-weight: bold;
+  }
 
-.featured-container h2 {
-  font-size: 1.5em;
-  color: #403621 !important;
-  font-weight: lighter;
-}
+  .buttons {
+    padding: 0.2em 0em;
+    font-size: 0.9em;
+    margin-top: 1em;
+    border-radius: 0.1em;
+    font-weight: lighter;
+  }
 
-.featured-container p {
-  color: rgb(49, 49, 49);
-}
+  /***** FEATURED *****/
 
-.text-f {
-  line-height: 1.3em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0em 7em 2em 7em;
-}
+  .featured-container {
+    border-radius: 50% 30% 40% 20%;
+    /* background-color: #485654; */
 
-.featured-container .buttons {
-  padding: 1.5em;
-  color: rgb(47, 47, 47);
+    width: 97%;
 
-  margin-top: 4em;
-  font-size: 0.8em;
+    /* margin-top: 4em; */
+
+    /* padding-top: 5em; */
+    padding-bottom: 0em;
+    position: relative;
+    top: -1em;
+  }
+
+  .img-boc {
+    top: -4em;
+
+    height: 25vh;
+    width: 25vh;
+  }
+
+  .featured-sticker {
+    margin-bottom: 1em;
+    padding: 0em;
+  }
+
+  .featured-container h2 {
+    color: #403621 !important;
+    font-weight: lighter;
+  }
+
+  .text-f {
+    padding: 0em 1em 2em 1em;
+  }
+
+  .featured-container .buttons {
+    padding: 1.5em;
+    margin-top: 2em;
+    font-size: 0.8em;
+  }
 }
