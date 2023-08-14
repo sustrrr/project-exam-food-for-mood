@@ -12,32 +12,35 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/e24706ebe3.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500&family=Inter:wght@200;300;400;500;600&family=Satisfy&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500&family=Bitter:wght@600&family=Inter:wght@200;300;400;500;600&family=Satisfy&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+
     <title>Good Food Mood | Recipes</title>
-    <link href="css/navFooter.css" rel="stylesheet" />
     <link href="css/index.css" rel="stylesheet" />
+    <link href="css/navFooter.css" rel="stylesheet" />
     <link href="css/recipes.css" rel="stylesheet" />
+    <link href="css/cardRecipes.css" rel="stylesheet" />
   </head>
   <body>
     <div class="wrapper">
       <nav>
         <div class="navbox">
           <div class="logobox">
-            <a class="logo" href="index.html">Good food mood</a>
+            <a class="logo" href="index.html">Good food <span>mood</span></a>
           </div>
           <div class="navbar">
             <ul>
               <li>
                 <a class="menuLink active" href="recipes.html">Recipes</a>
               </li>
-              <li><a class="menuLink" href="#newsletter">Newsletter</a></li>
               <li>
                 <a class="menuLink" href="ingredients.html">Ingredients</a>
               </li>
@@ -52,203 +55,467 @@
         </div>
       </nav>
 
-      <div class="welcome container">
-        <div class="welcome--img recipe--welcome--img"></div>
-        <div class="welcome--text">
-          <h1>Front page > Recipes</h1>
-        </div>
-      </div>
-
-      <div class="flextest">
-        <div class="search--container">
-          <div class="search">
-            <input
-              id="search-box"
-              placeholder="Search by ingridients ..."
-              onkeyup="searchVal()"
-            />
-            <button id="search-submit"><i class="fas fa-search"></i></button>
-          </div>
-
-          <div class="cards--recipes show">
-            <p class="loading">Loading recipes...</p>
+      <div class="bg">
+        <div class="welcome container">
+          <div class="welcome--text">
+            <h1>Front page > Recipes</h1>
           </div>
         </div>
+        <div class="flextest">
+          <div class="search--container">
+            <div class="search">
+              <input
+                id="search-box"
+                placeholder="Search by ingridients ..."
+                onkeyup="searchVal()"
+              />
+              <button id="search-submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
 
-        <div class="filter--recipe--container" id="recipecontainer">
-          <div class="filter">
-            <div class="selectflex">
-              <div class="per-page">
-                <label for="">Intolerance</label>
-                <div class="arrow">
-                  <select class="per-page-selection" id="intolerance">
-                    <option
-                      value=""
-                      disabled
-                      selected
-                      value
-                      class="disabled-option"
-                    ></option>
-                    <option value="">None</option>
-                    <option value="gluten" class="test">Gluten</option>
-                    <option value="grain">Grain</option>
-                    <option value="peanut">Peanut</option>
-                    <option value="dairy">Dairy</option>
-                    <option value="egg">Egg</option>
-                    <option value="seafood">Seafood</option>
-                    <option value="sesame">Sesame</option>
-                    <option value="shellfish">Shellfish</option>
-                    <option value="soy">Soy</option>
-                    <option value="sulfite">Sulfite</option>
-                    <option value="tree+nut">Tree Nut</option>
-                    <option value="wheat">Wheat</option>
-                  </select>
+            <div class="cards--recipes show">
+              <!-- <p class="loading">Loading recipes...</p> -->
+
+              <!-- CARDS -->
+              <div class="card">
+                <a href="recipesDetails.html">
+                  <div class="img">
+                    <img
+                      src="img/ingredients.jpg"
+                      alt="Picture of ${result.title}"
+                    />
+                  </div>
+                  <div class="card--text">
+                    <h2>Cannolini chicken soups</h2>
+                    <div class="card--button--container">
+                      <div class="card--button">View recipe</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="card">
+                <a href="recipesDetails.html">
+                  <div class="img">
+                    <img
+                      src="img/ingredients.jpg"
+                      alt="Picture of ${result.title}"
+                    />
+                  </div>
+                  <div class="card--text">
+                    <h2>Cannolini chicken soups</h2>
+                    <div class="card--button--container">
+                      <div class="card--button">View recipe</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="card">
+                <a href="recipesDetails.html">
+                  <div class="img">
+                    <img
+                      src="img/ingredients.jpg"
+                      alt="Picture of ${result.title}"
+                    />
+                  </div>
+                  <div class="card--text">
+                    <h2>Cannolini chicken soups</h2>
+                    <div class="card--button--container">
+                      <div class="card--button">View recipe</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="card">
+                <a href="recipesDetails.html">
+                  <div class="img">
+                    <img
+                      src="img/ingredients.jpg"
+                      alt="Picture of ${result.title}"
+                    />
+                  </div>
+                  <div class="card--text">
+                    <h2>Cannolini chicken soups</h2>
+                    <div class="card--button--container">
+                      <div class="card--button">View recipe</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="card">
+                <a href="recipesDetails.html">
+                  <div class="img">
+                    <img
+                      src="img/ingredients.jpg"
+                      alt="Picture of ${result.title}"
+                    />
+                  </div>
+                  <div class="card--text">
+                    <h2>Cannolini chicken soups</h2>
+                    <div class="card--button--container">
+                      <div class="card--button">View recipe</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="card">
+                <a href="recipesDetails.html">
+                  <div class="img">
+                    <img
+                      src="img/ingredients.jpg"
+                      alt="Picture of ${result.title}"
+                    />
+                  </div>
+                  <div class="card--text">
+                    <h2>Cannolini chicken soups</h2>
+                    <div class="card--button--container">
+                      <div class="card--button">View recipe</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="card">
+                <a href="recipesDetails.html">
+                  <div class="img">
+                    <img
+                      src="img/ingredients.jpg"
+                      alt="Picture of ${result.title}"
+                    />
+                  </div>
+                  <div class="card--text">
+                    <h2>
+                      Cannolini chicken soups cannolini chicken soups chicken
+                      soups
+                    </h2>
+                    <div class="card--button--container">
+                      <div class="card--button">View recipe</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="card">
+                <a href="recipesDetails.html">
+                  <div class="img">
+                    <img
+                      src="img/ingredients.jpg"
+                      alt="Picture of ${result.title}"
+                    />
+                  </div>
+                  <div class="card--text">
+                    <h2>Cannolini chicken soups</h2>
+                    <div class="card--button--container">
+                      <div class="card--button">View recipe</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!-- CARDS -->
+            </div>
+          </div>
+
+          <div class="filter--recipe--container" id="recipecontainer">
+            <div class="filter">
+              <div class="selectflex">
+                <div class="per-page">
+                  <label for="">Intolerance</label>
+                  <div class="arrow">
+                    <select class="per-page-selection" id="intolerance">
+                      <option
+                        value=""
+                        disabled
+                        selected
+                        value
+                        class="disabled-option"
+                      ></option>
+                      <option value="">None</option>
+                      <option value="gluten" class="f">Gluten</option>
+                      <option value="grain">Grain</option>
+                      <option value="peanut">Peanut</option>
+                      <option value="dairy">Dairy</option>
+                      <option value="egg">Egg</option>
+                      <option value="seafood">Seafood</option>
+                      <option value="sesame">Sesame</option>
+                      <option value="shellfish">Shellfish</option>
+                      <option value="soy">Soy</option>
+                      <option value="sulfite">Sulfite</option>
+                      <option value="tree+nut">Tree Nut</option>
+                      <option value="wheat">Wheat</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="populraity">
+                  <label for="">Sort by</label>
+                  <div class="arrow">
+                    <select class="per-page-selection" id="sort">
+                      <option
+                        value=""
+                        disabled
+                        selected
+                        value
+                        class="disabled-option"
+                      ></option>
+                      <option value="">None</option>
+                      <option value="popularity">Popularity</option>
+                      <option value="random">Newest</option>
+                      <option value="time">Cooking time</option>
+                      <option value="price">Price</option>
+                    </select>
+                  </div>
                 </div>
               </div>
 
-              <div class="populraity">
-                <label for="">Sort by</label>
-                <div class="arrow">
-                  <select class="per-page-selection" id="sort">
-                    <option
-                      value=""
-                      disabled
-                      selected
-                      value
-                      class="disabled-option"
-                    ></option>
-                    <option value="">None</option>
-                    <option value="popularity">Popularity</option>
-                    <option value="random">Newest</option>
-                    <option value="time">Cooking time</option>
-                    <option value="price">Price</option>
-                  </select>
+              <!--checked-->
+
+              <div class="meal-type">
+                <div class="radio-button">
+                  <input
+                    type="radio"
+                    id="all"
+                    name="valuecat"
+                    value=""
+                    checked
+                    onclick="empty(event)"
+                  />
+                  <label for="all">All</label>
+
+                  <input
+                    type="radio"
+                    id="maincourse"
+                    name="valuecat"
+                    value="main+course"
+                    onclick="maincourse(event)"
+                  />
+                  <label for="maincourse">Main course</label>
+
+                  <input
+                    type="radio"
+                    id="dessert"
+                    name="valuecat"
+                    value="dessert"
+                    onclick="dessert(event)"
+                  />
+                  <label for="dessert">Dessert</label>
+
+                  <input
+                    type="radio"
+                    id="appetizer"
+                    name="valuecat"
+                    value="appetizer"
+                    onclick="appetizer(event)"
+                  />
+                  <label for="appetizer">Appetizer</label>
+
+                  <input
+                    type="radio"
+                    id="breakfast"
+                    name="valuecat"
+                    value="breakfast"
+                    onclick="breakfast(event)"
+                  />
+                  <label for="breakfast">Breakfast</label>
+
+                  <input
+                    type="radio"
+                    id="salad"
+                    name="valuecat"
+                    value="salad"
+                    onclick="salad(event)"
+                  />
+                  <label for="salad">Salad</label>
+
+                  <input
+                    type="radio"
+                    id="beverage"
+                    name="valuecat"
+                    value="beverage"
+                    onclick="beverage(event)"
+                  />
+                  <label for="beverage">Beverage</label>
+
+                  <input
+                    type="radio"
+                    id="snack"
+                    name="valuecat"
+                    value="snack"
+                    onclick="snack(event)"
+                  />
+                  <label for="snack">Snack</label>
                 </div>
               </div>
             </div>
-
-            <!--checked-->
-
-            <div class="meal-type">
-              <div class="radio-button">
-                <input
-                  type="radio"
-                  id="all"
-                  name="valuecat"
-                  value=""
-                  checked
-                  onclick="empty(event)"
-                />
-                <label for="all">All</label>
-
-                <input
-                  type="radio"
-                  id="maincourse"
-                  name="valuecat"
-                  value="main+course"
-                  onclick="maincourse(event)"
-                />
-                <label for="maincourse">Main course</label>
-
-                <input
-                  type="radio"
-                  id="dessert"
-                  name="valuecat"
-                  value="dessert"
-                  onclick="dessert(event)"
-                />
-                <label for="dessert">Dessert</label>
-
-                <input
-                  type="radio"
-                  id="appetizer"
-                  name="valuecat"
-                  value="appetizer"
-                  onclick="appetizer(event)"
-                />
-                <label for="appetizer">Appetizer</label>
-
-                <input
-                  type="radio"
-                  id="breakfast"
-                  name="valuecat"
-                  value="breakfast"
-                  onclick="breakfast(event)"
-                />
-                <label for="breakfast">Breakfast</label>
-
-                <input
-                  type="radio"
-                  id="salad"
-                  name="valuecat"
-                  value="salad"
-                  onclick="salad(event)"
-                />
-                <label for="salad">Salad</label>
-
-                <input
-                  type="radio"
-                  id="beverage"
-                  name="valuecat"
-                  value="beverage"
-                  onclick="beverage(event)"
-                />
-                <label for="beverage">Beverage</label>
-
-                <input
-                  type="radio"
-                  id="snack"
-                  name="valuecat"
-                  value="snack"
-                  onclick="snack(event)"
-                />
-                <label for="snack">Snack</label>
-              </div>
-            </div>
           </div>
-        </div>
 
-        <div class="cards--recip none"></div>
-
-        <!-- mobile or desktop cards -->
-        <div class="cards--recip none">
-          <p class="loading">Loading recipes...</p>
+          <div class="cards--recip none">
+            <!-- mobile or desktop cards -->
+            <!-- CARDS -->
+            <div class="card">
+              <a href="recipesDetails.html">
+                <div class="img">
+                  <img
+                    src="img/ingredients.jpg"
+                    alt="Picture of ${result.title}"
+                  />
+                </div>
+                <div class="card--text">
+                  <h2>Cannolini chicken soups</h2>
+                  <div class="card--button--container">
+                    <div class="card--button">View recipe</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="card">
+              <a href="recipesDetails.html">
+                <div class="img">
+                  <img
+                    src="img/ingredients.jpg"
+                    alt="Picture of ${result.title}"
+                  />
+                </div>
+                <div class="card--text">
+                  <h2>Cannolini chicken soups</h2>
+                  <div class="card--button--container">
+                    <div class="card--button">View recipe</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="card">
+              <a href="recipesDetails.html">
+                <div class="img">
+                  <img
+                    src="img/ingredients.jpg"
+                    alt="Picture of ${result.title}"
+                  />
+                </div>
+                <div class="card--text">
+                  <h2>Cannolini chicken soups</h2>
+                  <div class="card--button--container">
+                    <div class="card--button">View recipe</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="card">
+              <a href="recipesDetails.html">
+                <div class="img">
+                  <img
+                    src="img/ingredients.jpg"
+                    alt="Picture of ${result.title}"
+                  />
+                </div>
+                <div class="card--text">
+                  <h2>Cannolini chicken soups</h2>
+                  <div class="card--button--container">
+                    <div class="card--button">View recipe</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="card">
+              <a href="recipesDetails.html">
+                <div class="img">
+                  <img
+                    src="img/ingredients.jpg"
+                    alt="Picture of ${result.title}"
+                  />
+                </div>
+                <div class="card--text">
+                  <h2>Cannolini chicken soups</h2>
+                  <div class="card--button--container">
+                    <div class="card--button">View recipe</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="card">
+              <a href="recipesDetails.html">
+                <div class="img">
+                  <img
+                    src="img/ingredients.jpg"
+                    alt="Picture of ${result.title}"
+                  />
+                </div>
+                <div class="card--text">
+                  <h2>Cannolini chicken soups</h2>
+                  <div class="card--button--container">
+                    <div class="card--button">View recipe</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="card">
+              <a href="recipesDetails.html">
+                <div class="img">
+                  <img
+                    src="img/ingredients.jpg"
+                    alt="Picture of ${result.title}"
+                  />
+                </div>
+                <div class="card--text">
+                  <h2>
+                    Cannolini chicken soups cannolini chicken soups chicken
+                    soups
+                  </h2>
+                  <div class="card--button--container">
+                    <div class="card--button">View recipe</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="card">
+              <a href="recipesDetails.html">
+                <div class="img">
+                  <img
+                    src="img/ingredients.jpg"
+                    alt="Picture of ${result.title}"
+                  />
+                </div>
+                <div class="card--text">
+                  <h2>Cannolini chicken soups</h2>
+                  <div class="card--button--container">
+                    <div class="card--button">View recipe</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- CARDS -->
+          </div>
         </div>
       </div>
     </div>
 
     <footer>
       <div class="container">
-        <div class="footer--newsletter" id="newsletter">
-          <h2>Sign up for our newsletter</h2>
-          <p>Get our newest recipes in your inbox!</p>
-          <form id="newsletter--form">
-            <input
-              name="emailNewsletter"
-              id="email"
-              placeholder="Your email..."
-            />
-            <div class="validateemail">
-              <p class="hide">validate email</p>
-            </div>
-            <button>Sign up</button>
-          </form>
+        <div class="logobox">
+          <a class="logo" href="index.html">Good for <span>mood</span></a>
         </div>
+
         <div class="footer--main">
-          <div class="logobox">
-            <a class="logo" href="index.html">Good for <span>mood</span></a>
+          <div class="footer" id="newsletter"></div>
+          <div class="footer--newsletter" id="newsletter">
+            <h2>Subscribe for our newsletter!</h2>
+            <form id="newsletter--form">
+              <input
+                name="emailNewsletter"
+                id="email"
+                placeholder="Your email..."
+              />
+              <button>Subscribe</button>
+            </form>
           </div>
-          <div class="footer--links">
+          <div class="validateemail"></div>
+          <!-- <div class="footer--links">
             <a href="recipes.html">Recipes</a>
             <a href="ingredients.html">Ingredients</a>
             <a href="contactAbout.html">About & contact</a>
-          </div>
+          </div> -->
           <div class="footer--social">
-            <h3>Follow us on</h3>
+            <h3></h3>
             <i class="fab fa-facebook-f"></i>
             <i class="fab fa-instagram"></i>
           </div>
-          <div class="footer" id="newsletter"></div>
         </div>
       </div>
     </footer>

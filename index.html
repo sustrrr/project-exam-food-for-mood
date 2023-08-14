@@ -12,25 +12,20 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
       rel="stylesheet"
     />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-      rel="stylesheet"
-    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500&family=Inter:wght@200;300;400;500;600&family=Satisfy&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500&family=Bitter:wght@600&family=Inter:wght@200;300;400;500;600&family=Satisfy&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900&display=swap"
       rel="stylesheet"
     />
 
-    <!--
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;700&family=Roboto+Flex:opsz,wght@8..144,400;8..144,500&family=Roboto:wght@500&family=Roboto+Condensed:wght@400&display=swap"
-      rel="stylesheet"
-    />-->
+    <script
+      src="https://kit.fontawesome.com/e24706ebe3.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Good Food Mood | Home</title>
-    <link href="css/navFooter.css" rel="stylesheet" />
     <link href="css/index.css" rel="stylesheet" />
+    <link href="css/navFooter.css" rel="stylesheet" />
     <link href="css/home.css" rel="stylesheet" />
   </head>
   <body>
@@ -38,7 +33,7 @@
       <nav>
         <div class="navbox">
           <div class="logobox">
-            <a class="logo" href="index.html">Good food mood</a>
+            <a class="logo" href="index.html">Good food <span>mood</span></a>
           </div>
           <div class="navbar">
             <ul>
@@ -48,58 +43,124 @@
               <li class="sh">
                 <a class="menuLink" href="ingredients.html">Ingredients</a>
               </li>
-              <li><a class="menuLink" href="#newsletter">Newsletter</a></li>
               <li>
                 <a class="menuLink" href="contactAbout.html">About & contact</a>
               </li>
             </ul>
           </div>
           <button class="ham">
-            <i class="fas fa-bars"></i>
+            <i class="fa-solid fa-bars"></i>
           </button>
         </div>
       </nav>
 
       <div class="container">
-        <div class="welcome welcome-wrap">
+        <div class="welcome--container">
+          <div class="welcome--img home"></div>
+          <div class="welcome--text">
+            <div class="vertical">
+              <div>
+                <h1>We have collected over <span>1,000</span> food recipes</h1>
+              </div>
+              <div class="searchhome">
+                <form>
+                  <input
+                    type="text"
+                    name="firstname"
+                    placeholder="Search recipes"
+                  />
+                  <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="welcome welcome-wrap">
           <div class="welcome--img home">
             <div class="glass">
               <div class="welcome--text">
-                <h1>We have collected over 1,000 food recipes</h1>
+                <h1>We have collected over <span>1,000</span> food recipes</h1>
                 <div class="searchhome">
                   <form>
                     <input
                       type="text"
                       name="firstname"
-                      placeholder="Search recipes..."
+                      placeholder="Search recipes"
                     />
+                    <button>
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
                   </form>
-                  <p><i class="fas fa-search"></i></p>
                 </div>
               </div>
             </div>
           </div>
+        </div> -->
+
+        <div class="type--category">
+          <h2 class="heading-two">Popular categories</h2>
+          <div class="type--category-flex">
+            <button
+              name="valuecat"
+              value="main+course"
+              onclick="storeValue(event)"
+            >
+              <span class="maincourse"></span>
+              <span class="title">Main course</span>
+              <span class="text"> </span>
+              <span class="buttons">See all</span>
+            </button>
+            <button name="valuecat" value="dessert" onclick="storeValue(event)">
+              <span class="dessert"></span>
+              <span class="title">Dessert</span>
+              <span class="text"> </span>
+              <span class="buttons">See all</span>
+            </button>
+            <button
+              name="valuecat"
+              value="breakfast"
+              onclick="storeValue(event)"
+            >
+              <span class="breakfast"></span>
+              <span class="title">Breakfast</span>
+              <span class="text"> </span>
+              <span class="buttons">See all</span>
+            </button>
+            <button
+              name="valuecat"
+              value="beverage"
+              onclick="storeValue(event)"
+            >
+              <span class="beverage"></span>
+              <span class="title">Beverage</span>
+              <span class="text"> </span>
+              <span class="buttons">See all</span>
+            </button>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div class="type--category smaller--container home">
-        <h2 class="heading-two">Popular categories</h2>
-        <button name="valuecat" value="main+course" onclick="storeValue(event)">
-          <span class="maincourse"></span>
-          Main+course
-        </button>
-        <button name="valuecat" value="dessert" onclick="storeValue(event)">
-          <span class="dessert"></span>
-          Dessert
-        </button>
-        <button name="valuecat" value="breakfast" onclick="storeValue(event)">
-          <span class="breakfast"></span>
-          Breakfast
-        </button>
-        <button name="valuecat" value="beverage" onclick="storeValue(event)">
-          <span class="beverage"></span>
-          Beverage
-        </button>
+    <div class="home featured">
+      <div class="featured-container">
+        <div class="img-boc">
+          <img src="img/beverage.jpg" />
+        </div>
+        <div class="text-f">
+          <p class="featured-sticker">Featured</p>
+          <h2>Title food</h2>
+          <p>
+            Ut neque urna, consectetur et malesuada sed, porttitor nec dui.
+            Suspendisse vitae arcu hendrerit, fermentum nunc quis, aliquet nunc.
+            Aliquam finibus orci ut nibh laoreet, sed vestibulum odio viverra.
+            Cras at augue consectetur, mollis quam a, mollis nisi. Suspendisse
+            potenti.
+          </p>
+          <span class="buttons">Go to recipe</span>
+        </div>
       </div>
     </div>
 
@@ -112,6 +173,8 @@
     </div>
 -->
 
+    <!--
+
     <div class="container smaller--container home popular-recipes">
       <h2 class="heading-two">Most popular recipes</h2>
       <div class="cards--recipes popular">
@@ -121,38 +184,35 @@
     <div class="see--more--container">
       <a href="recipes.html"> See all the recipes </a>
     </div>
+    -->
 
     <footer>
       <div class="container">
-        <div class="footer--newsletter" id="newsletter">
-          <h2>Sign up for our newsletter</h2>
-          <p>Get our newest recipes in your inbox!</p>
-          <form id="newsletter--form">
-            <input
-              name="emailNewsletter"
-              id="email"
-              placeholder="Your email..."
-            />
-            <div class="validateemail">
-              <p class="hide">validate email</p>
-            </div>
-            <button>Sign up</button>
-          </form>
+        <div class="logobox">
+          <a class="logo" href="index.html">Good for <span>mood</span></a>
         </div>
+
         <div class="footer--main">
-          <div class="logobox">
-            <a class="logo" href="index.html">Good for <span>mood</span></a>
+          <div class="footer" id="newsletter"></div>
+          <div class="footer--newsletter" id="newsletter">
+            <h2>Subscribe for our newsletter!</h2>
+            <form id="newsletter--form">
+              <input
+                name="emailNewsletter"
+                id="email"
+                placeholder="Your email..."
+              />
+              <button>Subscribe</button>
+            </form>
           </div>
-          <div class="footer--links">
+          <div class="validateemail"></div>
+          <!-- <div class="footer--links">
             <a href="recipes.html">Recipes</a>
             <a href="ingredients.html">Ingredients</a>
             <a href="contactAbout.html">About & contact</a>
-          </div>
-
-          <div class="footer" id="newsletter"></div>
-
+          </div> -->
           <div class="footer--social">
-            <h3>Follow us on</h3>
+            <h3></h3>
             <i class="fab fa-facebook-f"></i>
             <i class="fab fa-instagram"></i>
           </div>

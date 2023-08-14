@@ -11,16 +11,24 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/e24706ebe3.js"
+      crossorigin="anonymous"
+    ></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;700&family=Roboto+Flex:opsz,wght@8..144,400;8..144,500&family=Roboto:wght@300&family=Roboto+Condensed:wght@400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500&family=Bitter:wght@600&family=Inter:wght@200;300;400;500;600&family=Satisfy&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+
     <title>Good Food Mood | Ingredients</title>
-    <link href="css/navFooter.css" rel="stylesheet" />
     <link href="css/index.css" rel="stylesheet" />
+    <link href="css/navFooter.css" rel="stylesheet" />
     <link href="css/ingredients.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -32,7 +40,6 @@
           <div class="navbar">
             <ul>
               <li><a class="menuLink" href="recipes.html">Recipes</a></li>
-              <li><a class="menuLink" href="#newsletter">Newsletter</a></li>
               <li>
                 <a class="menuLink active" href="ingredients.html"
                   >Ingredients</a
@@ -49,57 +56,122 @@
         </div>
       </nav>
 
-      <div class="welcome">
-        <div class="welcome--img recipe--welcome--img"></div>
-        <div class="welcome--text">
-          <h1>Search for an ingredient</h1>
+      <div class="bg">
+        <div class="welcome container">
+          <div class="welcome--text">
+            <h1>Front page > Ingredients searcher</h1>
+          </div>
         </div>
-      </div>
-      <div class="container smaller--container search--container">
-        <div class="search">
-          <input id="search-box" placeholder="Search for an ingridient ..." />
-          <button id="search-submit"><i class="fas fa-search"></i></button>
+        <div class="search--container">
+          <div class="search">
+            <input id="search-box" placeholder="Search for an ingridient ..." />
+            <button id="search-submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
         </div>
+        <!-- 
+        <div class="types">
+          <h2>Popular searches</h2>
+          <div class="radioButton" onclick="maincourse()">
+            <input
+              type="checkbox"
+              id="maincourse"
+              name="valuecat"
+              value="Salads"
+            />
+            <label for="maincourse">Salads</label>
+
+            <input
+              type="checkbox"
+              id="dessert"
+              name="valuecat"
+              value="dessert"
+            />
+            <label for="dessert">Dessert</label>
+
+            <input
+              type="checkbox"
+              class="radio"
+              id="appetizer"
+              name="valuecat"
+              value="Tomato"
+            />
+            <label for="appetizer">Tomatoes</label>
+
+            <input
+              type="checkbox"
+              class="radio"
+              id="breakfast"
+              name="valuecat"
+              value="Apple"
+            />
+
+            <label for="breakfast">Apples</label>
+          </div>
+        </div> -->
+        <div class="cards--ingridients"></div>
+
+        <!--
+        <div class="ill">
+          <img src="img/Hamburger-bro (1).svg" />
+        </div>
+        -->
       </div>
-      <div class="cards--ingridients"></div>
     </div>
 
     <footer>
       <div class="container">
-        <div class="footer--newsletter" id="newsletter">
-          <h2>Sign up for our newsletter</h2>
-          <p>Get our newest recipes in your inbox!</p>
-          <form id="newsletter--form">
-            <input
-              name="emailNewsletter"
-              id="email"
-              placeholder="Your email..."
-            />
-            <div class="validateemail">
-              <p class="hide">validate email</p>
-            </div>
-            <button>Sign up</button>
-          </form>
+        <div class="logobox">
+          <a class="logo" href="index.html">Good for <span>mood</span></a>
+          <p></p>
         </div>
+
         <div class="footer--main">
-          <div class="logobox">
-            <a class="logo" href="index.html">Good for <span>mood</span></a>
+          <div class="footer" id="newsletter"></div>
+          <div class="footer--newsletter" id="newsletter">
+            <h2>Subscribe for our newsletter!</h2>
+            <form id="newsletter--form">
+              <input
+                name="emailNewsletter"
+                id="email"
+                placeholder="Your email..."
+              />
+              <button>Subscribe</button>
+            </form>
           </div>
-          <div class="footer--links">
+          <div class="validateemail"></div>
+          <!-- <div class="footer--links">
             <a href="recipes.html">Recipes</a>
             <a href="ingredients.html">Ingredients</a>
             <a href="contactAbout.html">About & contact</a>
-          </div>
+          </div> -->
           <div class="footer--social">
-            <h3>Follow us on</h3>
+            <h3></h3>
             <i class="fab fa-facebook-f"></i>
             <i class="fab fa-instagram"></i>
           </div>
-          <div class="footer" id="newsletter"></div>
         </div>
       </div>
     </footer>
     <script src="script/nav.js"></script>
     <script src="script/ingredients.js"></script>
+    <script>
+      $("input:checkbox").on("click", function () {
+        // in the handler, 'this' refers to the box clicked on
+        var $box = $(this);
+        if ($box.is(":checked")) {
+          // the name of the box is retrieved using the .attr() method
+          // as it is assumed and expected to be immutable
+          var group = "input:checkbox[name='" + $box.attr("name") + "']";
+          // the checked state of the group/box on the other hand will change
+          // and the current value is retrieved using .prop() method
+          $(group).prop("checked", false);
+          $box.prop("checked", true);
+        } else {
+          $box.prop("checked", false);
+        }
+      });
+    </script>
   </body>
 </html>

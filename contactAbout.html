@@ -15,12 +15,13 @@
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
-        href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500&family=Inter:wght@200;300;400;500;600&family=Satisfy&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500&family=Bitter:wght@600&family=Inter:wght@200;300;400;500;600&family=Satisfy&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900&display=swap"
         rel="stylesheet"
       />
+
       <title>Good Food Mood | Contact and about</title>
-      <link href="css/navFooter.css" rel="stylesheet" />
       <link href="css/index.css" rel="stylesheet" />
+      <link href="css/navFooter.css" rel="stylesheet" />
       <link href="css/contact.css" rel="stylesheet" />
     </head>
   </head>
@@ -29,12 +30,11 @@
       <nav>
         <div class="navbox">
           <div class="logobox">
-            <a class="logo" href="index.html">Good food mood</a>
+            <a class="logo" href="index.html">Good food <span>mood</span></a>
           </div>
           <div class="navbar">
             <ul>
               <li><a class="menuLink" href="recipes.html">Recipes</a></li>
-              <li><a class="menuLink" href="#newsletter">Newsletter</a></li>
               <li>
                 <a class="menuLink" href="ingredients.html">Ingredients</a>
               </li>
@@ -51,68 +51,93 @@
         </div>
       </nav>
 
-      <div class="welcome">
-        <div class="welcome--text">
-          <h1>Front page > Contact & about</h1>
-        </div>
-        <div class="welcome--img recipe--welcome--img">
-          <div class="flex">
-            <div class="info">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-                ultrices pulvinar nisl, quis ultrices dolor ultrices non. Nullam
-                porta mi in sapien vehicula, et dapibus ligula porttitor.
-                Phasellus suscipit finibus sapien, vestibulum molestie ligula
-                lobortis a. Morbi blandit leo vitae auctor faucibus.
-              </p>
-              <ul>
-                <li><i class="fas fa-at"></i>example@mail.com</li>
-                <li><i class="fas fa-phone"></i>00000299229</li>
-              </ul>
-            </div>
-            <div class="form--container">
-              <form id="contactForm">
-                <div>
-                  <label>
-                    Your name*
-                    <input
-                      name="firstName"
-                      id="firstName"
-                      type="text"
-                      pattern="[a-zA-Z]*"
-                    />
-                  </label>
-                  <div class="form-error-contact" id="firstNameError">
-                    Please enter your first name
-                  </div>
+      <div class="bg">
+        <div class="welcome container">
+          <div class="welcome--img recipe--welcome--img">
+            <div class="flex">
+              <div class="info">
+                <div class="welcome--text">
+                  <h1>Front page > Contact & about</h1>
                 </div>
 
-                <div>
-                  <label>
-                    Email*
-                    <input
-                      name="email-contact"
-                      id="email-contact"
-                      type="email"
-                    />
-                  </label>
-                  <div class="form-error-contact" id="emailError-contact">
-                    Please enter a valid email address
-                  </div>
+                <div class="contactinfo">
+                  <p><i class="fas fa-at"></i>example@mail.com</p>
+                  <p><i class="fas fa-phone"></i>00000299229</p>
                 </div>
 
-                <div>
-                  <label>
-                    Message*
-                    <textarea name="message" id="message"></textarea>
-                  </label>
-                  <div class="form-error-contact" id="messageError">
-                    Message must be at least 15 characters long.
-                  </div>
+                <div class="infotext">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                    pretium vel mi et vestibulum. Aliquam ac sagittis lectus.
+                    Maecenas eu velit ac lectus tincidunt dignissim. Praesent
+                    viverra finibus sapien non iaculis. Praesent venenatis
+                    finibus molestie. Aenean quis lacinia turpis. Suspendisse
+                    potenti. Cras a purus vitae diam condimentum laoreet. Aenean
+                    ut tincidunt tellus. In a tortor semper, posuere elit nec,
+                    ullamcorper dui. Etiam id dictum quam. Mauris vulputate
+                    tempor purus, sit amet fringilla erat porttitor viverra.
+                    Phasellus nec pellentesque tellus.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                    pretium vel mi et vestibulum. Aliquam ac sagittis lectus.
+                    Maecenas eu velit ac lectus tincidunt dignissim. Praesent
+                    viverra finibus sapien non iaculis. Praesent venenatis
+                    finibus molestie. Aenean quis lacinia turpis. Suspendisse
+                    potenti. Cras a purus vitae diam condimentum laoreet. Aenean
+                    ut tincidunt tellus. In a tortor semper, posuere elit nec,
+                    ullamcorper dui. Etiam id dictum quam. Mauris vulputate
+                    tempor purus, sit amet fringilla erat porttitor viverra.
+                    Phasellus nec pellentesque tellus.
+                  </p>
                 </div>
-                <div class="success_text-contact"><p>Message sent!</p></div>
-                <button>Submit now</button>
-              </form>
+              </div>
+              <!--
+              <div class="form--container">
+                <form id="contactForm">
+                  <div>
+                    <label>
+                      Name*
+                      <input
+                        name="firstName"
+                        id="firstName"
+                        type="text"
+                        pattern="[a-zA-Z]*"
+                      />
+                    </label>
+                    <div class="form-error-contact" id="firstNameError">
+                      Please enter your first name
+                    </div>
+                  </div>
+
+                  <div>
+                    <label>
+                      Email*
+                      <input
+                        name="email-contact"
+                        id="email-contact"
+                        type="email"
+                      />
+                    </label>
+                    <div class="form-error-contact" id="emailError-contact">
+                      Please enter a valid email address
+                    </div>
+                  </div>
+
+                  <div>
+                    <label>
+                      Message*
+                      <textarea name="message" id="message"></textarea>
+                    </label>
+                    <div class="form-error-contact" id="messageError">
+                      Message must be at least 15 characters long.
+                    </div>
+                  </div>
+                  <div class="success_text-contact"><p>Message sent!</p></div>
+                  <button>Submit now</button>
+                </form>
+              </div>
+              -->
             </div>
           </div>
         </div>
@@ -121,36 +146,34 @@
 
     <footer>
       <div class="container">
-        <div class="footer--newsletter" id="newsletter">
-          <h2>Sign up for our newsletter</h2>
-          <p>Get our newest recipes in your inbox!</p>
-          <form id="newsletter--form">
-            <input
-              name="emailNewsletter"
-              id="email"
-              placeholder="Your email..."
-            />
-            <div class="validateemail">
-              <p class="hide">validate email</p>
-            </div>
-            <button>Sign up</button>
-          </form>
+        <div class="logobox">
+          <a class="logo" href="index.html">Good for <span>mood</span></a>
         </div>
+
         <div class="footer--main">
-          <div class="logobox">
-            <a class="logo" href="index.html">Good for <span>mood</span></a>
+          <div class="footer" id="newsletter"></div>
+          <div class="footer--newsletter" id="newsletter">
+            <h2>Subscribe for our newsletter!</h2>
+            <form id="newsletter--form">
+              <input
+                name="emailNewsletter"
+                id="email"
+                placeholder="Your email..."
+              />
+              <button>Subscribe</button>
+            </form>
           </div>
-          <div class="footer--links">
+          <div class="validateemail"></div>
+          <!-- <div class="footer--links">
             <a href="recipes.html">Recipes</a>
             <a href="ingredients.html">Ingredients</a>
             <a href="contactAbout.html">About & contact</a>
-          </div>
+          </div> -->
           <div class="footer--social">
-            <h3>Follow us on</h3>
+            <h3></h3>
             <i class="fab fa-facebook-f"></i>
             <i class="fab fa-instagram"></i>
           </div>
-          <div class="footer" id="newsletter"></div>
         </div>
       </div>
     </footer>

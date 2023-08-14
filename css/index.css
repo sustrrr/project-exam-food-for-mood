@@ -1,6 +1,138 @@
-* {
-  padding: 0;
+/* /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+/* article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/***************************/
+
+* {
+  padding: 0em;
+  margin: 0em;
   box-sizing: border-box;
 }
 
@@ -14,8 +146,9 @@ body {
 }
 
 body {
-  background-color: #efefef;
-  background-color: #d3d3d3;
+  /* background-color: #efefef;
+  background-color: #d3d3d3; */
+  background: #d3d3d3;
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -29,11 +162,20 @@ body {
   max-width: 100%;
   margin: 0 auto;
   padding-top: 1em;
-  margin-top: 3.3em;
+  margin-top: 3.7em;
+}
+
+@media screen and (max-width: 1150px) {
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top: 1em;
+    margin-top: 2.6em;
+  }
 }
 
 .smaller--container {
-  padding: 3em 0em;
+  padding: 4.7em 0em;
   width: 80%;
 }
 
@@ -46,9 +188,12 @@ h1 {
 }
 
 h2 {
-  margin-bottom: 1em;
-  color: rgb(83, 131, 83) !important;
+  margin-bottom: 0.7em;
   font-weight: bold;
+  font-family: "domine";
+}
+
+button {
   font-family: "domine";
 }
 
@@ -58,7 +203,7 @@ h2 {
 }
 
 p {
-  font-family: "source sans pro", sans-serif;
+  font-family: "inter", sans-serif;
 }
 
 p,
@@ -73,13 +218,6 @@ a {
   font-size: 0.9em;
   font-family: "Roboto Flex", sans-serif;
   font-weight: bold;
-}
-
-.logo {
-  font-family: "satisfy";
-  font-size: 1.4em;
-  font-weight: bold;
-  color: #355c2b;
 }
 
 .card h2 {
@@ -104,5 +242,77 @@ a {
 @media screen and (max-width: 540px) {
   h1 {
     font-size: 1.7em;
+  }
+}
+
+/**** search */
+
+.search input,
+.search input::-webkit-input-placeholder {
+  font-size: 0.95em;
+  color: #000000;
+  opacity: 1;
+  /* -webkit-text-size-adjust: none; */
+}
+
+.search input::-moz-placeholder {
+  /* Firefox 19+ */
+  font-size: 0.95em;
+  color: #000000;
+  opacity: 1;
+}
+
+.searchhome input,
+.searchhome input::-webkit-input-placeholder {
+  font-size: 0.95em;
+  color: #000000;
+  opacity: 1;
+}
+
+.searchhome input::-moz-placeholder {
+  /* Firefox 19+ */
+  font-size: 0.95em;
+  color: #000000;
+  opacity: 1;
+}
+
+/**** cross browser */
+h1 {
+  color: #485654;
+  text-align: center;
+  font-weight: bold;
+  font-family: "domine";
+  font-size: 1.1em;
+}
+
+/**firefox*/
+@media screen and (min--moz-device-pixel-ratio: 0) {
+  h1 {
+    font-weight: bold;
+    font-family: "bitter";
+  }
+
+  h2 {
+    font-family: "bitter";
+  }
+
+  button {
+    font-family: "bitter";
+  }
+}
+
+/** Safari */
+@media not all and (min-resolution: 0.001dpcm) {
+  h1 {
+    font-weight: bold;
+    font-family: "bitter";
+  }
+
+  h2 {
+    font-family: "bitter";
+  }
+
+  button {
+    font-family: "bitter";
   }
 }

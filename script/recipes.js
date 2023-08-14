@@ -1,5 +1,5 @@
 const baseUrl =
-  "https://api.spoonacular.com/recipes/complexSearch?apiKey=fe37e55accd7477e96bb6e2108eeaee4&number=30";
+  "https://api.spoonacular.com/recipes/complexSearch?apiKey=fe37e55accd7477e96bb6e2108eeaee4&number=30 r ";
 
 const cardmobile = document.querySelector(".none");
 const carddesktop = document.querySelector(".show"); //card countainer
@@ -32,7 +32,9 @@ async function getRecipe(url) {
         cardmobile.innerHTML += `
       <div class="card">
           <a href="recipesDetails.html?id=${result.id}">
-            <img src="${result.image}" alt="Picture of ${result.title}"/>
+          <div class="img">
+            <img src="img/beverage.jpg" alt="Picture of ${result.title}"/>
+            </div>
             <div class="card--text">
               <h2>${result.title}</h2>
             <div class="card--button--container">
@@ -48,7 +50,9 @@ async function getRecipe(url) {
         carddesktop.innerHTML += `
       <div class="card">
           <a href="recipesDetails.html?id=${result.id}">
-            <img src="${result.image}" alt="Picture of ${result.title}"/>
+          <div class="img">
+            <img src="img/ingredients.jpg" alt="Picture of ${result.title}"/>
+            </div>
             <div class="card--text">
               <h2>${result.title}</h2>
             <div class="card--button--container">

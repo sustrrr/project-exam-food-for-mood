@@ -1,8 +1,8 @@
 const baseUrl =
-  "https://api.spoonacular.com/recipes/complexSearch?apiKey=66953b50279b4b71981586a42dead42c&number=60 p";
+  "https://api.spoonacular.com/recipes/complexSearch?apiKey=66953b50279b4b71981586a42dead42c  x  &number=60 p";
 
 const popularUrl =
-  "https://api.spoonacular.com/recipes/complexSearch?apiKey=66953b50279b4b71981586a42dead42c&sort=popularity";
+  "https://api.spoonacular.com/recipes/complexSearch?apiKey=66953b50279b4b71981586a42dead42 x c";
 
 const mealPlannerContainer = document.querySelector(".cards--recipes");
 const popularRecipes = document.querySelector(".popular");
@@ -161,6 +161,7 @@ function mealPlanner(results) {
 /// collect input
 
 const form = document.querySelector("form");
+const searchbutton = document.querySelector("#searchbutton");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -168,15 +169,18 @@ form.addEventListener("submit", (e) => {
   console.log(fd);
 
   const obj = Object.fromEntries(fd);
-  console.log(obj);
+  console.log(obj.firstname);
 
-  const json = JSON.stringify(obj);
-  localStorage.setItem("form", json);
-
-  window.location.href = "recipes.html";
+  if (obj.firstname) {
+    const json = JSON.stringify(obj);
+    localStorage.setItem("form", json);
+    window.location.href = "recipes.html";
+  }
 });
 
 /// collect input
+
+/*
 
 const ingr = document.querySelector(".ingr");
 
@@ -193,6 +197,7 @@ ingr.addEventListener("submit", (e) => {
 
   window.location.href = "ingredients.html";
 });
+*/
 
 /// collect type
 
