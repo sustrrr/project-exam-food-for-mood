@@ -1,17 +1,7 @@
 .welcome {
   margin-bottom: 1em;
-  margin-top: 4em;
+  margin-top: 3.7em;
 }
-/* 
-.bg {
-  background-color: #485654;
-  width: 98%;
-  margin: 0 auto;
-  border-radius: 0.5em;
-  position: relative;
-  top: 2em;
-  padding-bottom: 3em;
-} */
 
 .recipe--welcome--img {
   width: 95%;
@@ -22,12 +12,15 @@
   padding: 0em 5em 5em 5em;
 }
 
-.infotext {
+.infotext,
+.infotext p {
   margin-top: 2em;
+  color: #dcdcdc !important;
+  font-size: 0.9em;
 }
 
-.infotext p {
-  margin: 1em 0em;
+.contactimgtwo {
+  display: none;
 }
 
 .welcome--text {
@@ -49,18 +42,14 @@ h1 {
 }
 
 .flex {
-  display: flex;
-  flex-direction: column;
   width: 70%;
-  grid-gap: 1em;
   margin: 0 auto;
   /* align-items: flex-start;
   align-self: flex-start; */
-  align-items: end;
   padding: 5em 5em;
   padding-top: 3em;
 
-  border-radius: 0em;
+  border-radius: 0.5em;
   background: #485654;
   /* background-color: #485654; */
   box-shadow: 0 7px 30px rgba(0, 0, 0, 0.1);
@@ -69,7 +58,6 @@ h1 {
 }
 
 .info {
-  flex: 2;
   line-height: 1.7em;
 }
 
@@ -89,75 +77,10 @@ h1 {
   font-size: 1.5em;
   color: #7c8d7a;
 }
-
-/* small pc */
-@media screen and (max-width: 1250px) {
-  .recipe--welcome--img {
-    width: 85%;
-    margin: 0 auto;
-    border-radius: 0.5em;
-    background-image: url("../img/welcome.jpg");
-    background-size: cover;
-  }
-
-  .flex {
-    flex-direction: row;
-    text-align: center;
-    grid-gap: 2em;
-  }
-
-  .info {
-    width: 70%;
-    text-align: center;
-    margin: 0 auto;
-  }
-}
-
-/* tablet pro */
-@media screen and (max-width: 1030px) {
-  .form--container {
-    margin: 0 auto;
-    width: 80%;
-  }
-}
-
-/* tablet */
-@media screen and (max-width: 768px) {
-  .flex {
-    flex-direction: column;
-    text-align: center;
-    grid-gap: 2em;
-  }
-
-  .info {
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-  }
-}
-
-/* mobile xl */
-@media screen and (max-width: 540px) {
-  .recipe--welcome--img {
-    width: 99%;
-    margin: 0 auto;
-    border-radius: 0.5em;
-    background-image: url("../img/welcome.jpg");
-    background-size: cover;
-  }
-
-  .flex {
-    padding: 3em 1em;
-  }
-}
-
-.infotext p {
-  color: #dcdcdc !important;
-  font-size: 0.9em;
-}
-
 .contactinfo {
   background: #485654;
+
+  padding: 1em 0em;
 }
 
 .contactinfo .fas {
@@ -166,7 +89,92 @@ h1 {
   padding: 1em;
 }
 
+.contactimg {
+  display: none;
+}
+
 .contactinfo p {
   color: #fddc9a !important;
-  font-size: 1em;
+  font-size: 0.9em;
+}
+
+/* small pc */
+@media screen and (max-width: 1250px) {
+  .recipe--welcome--img {
+    width: 97%;
+    margin: 0 auto;
+    border-radius: 0.5em;
+    background-image: url("../img/welcome.jpg");
+    background-size: cover;
+    padding: 0em;
+  }
+
+  .flex {
+    flex-direction: row;
+    grid-gap: 2em;
+    width: 100%;
+  }
+
+  .info {
+    width: 100%;
+    padding: 0em;
+    margin: 0 auto;
+  }
+
+  .contactimg {
+    /* background-image: url("../img/welcome.jpg");
+    background-size: cover;
+    padding: 10em; */
+    float: right;
+    border-radius: 50em;
+    overflow: hidden;
+    position: relative;
+    shape-outside: circle();
+    width: 15em;
+    height: 15em;
+    margin: 2em;
+    display: inline;
+    clear: both;
+  }
+
+  .contactimg img {
+    /* background-image: url("../img/welcome.jpg");
+    background-size: cover;
+    padding: 10em; */
+    width: 300%;
+  }
+}
+
+/* tablet pro */
+@media screen and (max-width: 750px) {
+  .flex {
+    flex-direction: row;
+    grid-gap: 2em;
+    width: 100%;
+    padding: 1.7em;
+    padding-top: 4.7em;
+  }
+
+  .info {
+    width: 100%;
+    padding: 0em;
+    margin: 0 auto;
+  }
+
+  .contactimg {
+    display: none;
+  }
+
+  .contactimgtwo {
+    border-radius: 50em;
+    width: 7em;
+    height: 7em;
+    position: relative;
+    top: 4em;
+    display: block;
+  }
+  .contactimgtwo img {
+    width: 300%;
+    border-radius: 50em;
+  }
 }
