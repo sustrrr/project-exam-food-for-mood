@@ -123,8 +123,12 @@
 .type--category {
   margin: 0 auto;
   margin-top: 0em;
-  padding: 10em 10em 20em 15em;
+  padding: 3em 10em 20em 3em;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   text-align: center;
 }
 
@@ -136,7 +140,7 @@
 }
 
 .type--category-flex button {
-  flex: 1 0 10%;
+  flex: 4 40% 10%;
   border: none;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -164,7 +168,7 @@
   pointer-events: none;
   cursor: pointer;
   border-radius: 50em;
-  padding: 7em;
+  padding: 6em;
   max-width: 5em;
   margin: 0 auto;
 
@@ -179,7 +183,6 @@
   background-repeat: no-repeat;
   flex: 1;
 }
-
 .dessert {
   background-image: url("../img/dessert.jpg");
 }
@@ -299,6 +302,10 @@
     width: 90%;
   }
 
+  .type--category {
+    padding: 3em 3em 20em 3em;
+  }
+
   .card {
     flex: 1 0 30%;
     max-width: calc(30% - 1em); /*this*/
@@ -306,6 +313,13 @@
 
   .popular {
     padding-left: 0em;
+  }
+
+  .maincourse,
+  .dessert,
+  .breakfast,
+  .beverage {
+    padding: 4em;
   }
 }
 
@@ -589,7 +603,8 @@
     font-size: 1.1em !important;
   }
 
-  h2 {
+  .type--category h2,
+  .text-f h2 {
     font-size: 1.3em !important;
   }
 
