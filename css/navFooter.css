@@ -258,6 +258,7 @@ footer .container {
     rgba(234, 234, 234, 0) 25%,
     rgba(232, 232, 232, 0) 35%
   );
+
   padding: 3em;
 
   background-color: #54564800;
@@ -405,6 +406,11 @@ footer {
 
 /* tablet xl */
 @media screen and (max-width: 1100px) {
+  footer .logobox {
+    text-shadow: -1px -1px 0 #d3d3d3, -1px 1px 0 #d3d3d3, 1px -1px 0 #d3d3d3,
+      1px 1px 0 #d3d3d3;
+  }
+
   footer {
     width: 100%;
     padding: 0;
