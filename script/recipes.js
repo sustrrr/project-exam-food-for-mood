@@ -33,7 +33,7 @@ async function getRecipe(url) {
       <div class="card">
           <a href="recipesDetails.html?id=${result.id}">
           <div class="img">
-            <img src="img/welcome.jpg" alt="Picture of ${result.title}"/>
+            <img src="${result.image}" alt="Picture of ${result.title}"/>
             </div>
             <div class="card--text">
               <h2>${result.title}</h2>
@@ -51,7 +51,7 @@ async function getRecipe(url) {
       <div class="card">
           <a href="recipesDetails.html?id=${result.id}">
           <div class="img">
-          <img src="img/welcome.jpg" alt="Picture of ${result.title}"/>
+          <img src="${result.image}" alt="Picture of ${result.title}"/>
             </div>
             <div class="card--text">
               <h2>${result.title}</h2>
