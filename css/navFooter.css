@@ -432,6 +432,12 @@ footer {
 
 /* mobile xl */
 @media screen and (max-width: 590px) {
+  footer .logobox {
+    text-shadow: -1px -1px 0 #d3d3d3, -1px 1px 0 #d3d3d3, 1px -1px 0 #d3d3d3,
+      1px 1px 0 #d3d3d3;
+    font-size: 1em;
+  }
+
   .footer--info .main--button {
     width: 60%;
   }
