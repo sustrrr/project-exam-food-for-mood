@@ -588,7 +588,6 @@
     font-size: 1em;
     text-transform: uppercase;
     margin-top: 1em;
-    font-weight: bold;
   }
 
   .buttons {
@@ -606,7 +605,6 @@
     font-size: 1em;
     text-transform: uppercase;
     margin-top: 1em;
-    font-weight: bold;
 
     text-shadow: -1px -1px 0 #485654, -1px 1px 0 #485654, 1px -1px 0 #485654,
       1px 1px 0 #485654;
@@ -660,7 +658,6 @@
     font-size: 0.8em;
     text-transform: uppercase;
     margin-top: 1em;
-    font-weight: bold;
   }
 
   .buttons {
