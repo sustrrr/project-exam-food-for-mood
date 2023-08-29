@@ -156,7 +156,7 @@ h1 {
     grid-gap: 2em;
     width: 100%;
     padding: 1.7em;
-    padding-top: 4.7em;
+    padding-top: 2.7em;
   }
 
   .info {
@@ -185,5 +185,4 @@ h1 {
 
 .contactinfo .yest {
   color: #fddc9a !important;
-  color: #871414 !important;
 }
