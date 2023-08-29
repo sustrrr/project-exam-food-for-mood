@@ -1,5 +1,5 @@
 const baseUrl =
-  "https://api.spoonacular.com/food/ingredients/search?apiKey=66953b50279b4b71981586a42dead42c&query=";
+  "https://api.spoonacular.com/food/ingredients/search?apiKey=b9790849db82459f941ca769ff778893&query=";
 
 const searchButton = document.querySelector("#search-submit");
 const cardContainer = document.querySelector(".cards--ingridients");
