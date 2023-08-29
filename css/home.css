@@ -711,4 +711,10 @@
     margin-top: 2em;
     font-size: 0.8em;
   }
+
+  .vertical {
+    padding-top: 17em;
+    flex: 1;
+    height: 70vh;
+  }
 }
