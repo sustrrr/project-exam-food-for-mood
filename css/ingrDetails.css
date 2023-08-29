@@ -1,6 +1,6 @@
 .recipe--details--img {
-  margin-top: 5em;
-  margin-bottom: 1em;
+  margin-top: 1em;
+  margin-bottom: 0.3em;
   width: 100%;
   overflow: hidden;
   text-align: center;
@@ -21,13 +21,15 @@
   margin: 0 auto;
   width: 67%;
   padding: 3em 0em;
-  background-color: white;
+  background-color: #485654;
   text-align: center;
+  color: white;
 }
 
 .recipe--container h1 {
   text-align: center;
   text-transform: lowercase;
+  color: #fddc9a;
 }
 
 .recipe--container h1:first-letter {
@@ -35,7 +37,9 @@
 }
 
 .recipe--container h2 {
+  display: none;
   font-size: 1.3em;
+  color: #fddc9a;
 }
 
 .recipe--time {
@@ -46,7 +50,7 @@
 }
 
 .recipe--time p {
-  margin: 2em 0em 2em 0em;
+  margin: 0em 0em 0em 0em;
   display: inline-block;
 }
 
@@ -59,12 +63,15 @@
   text-align: left;
   flex-direction: row; /*mobile*/
   grid-gap: 5em;
-  line-height: 0.5em;
+  line-height: 0.2em;
   padding: 3em 5em;
 }
 
 .recipe--details--text p {
   font-weight: bold;
+  line-height: 0em;
+  margin: 0em;
+  padding: 0em;
 }
 
 .recipe--details--text span {
@@ -126,4 +133,14 @@
   .img-center {
     width: 90%;
   }
+}
+
+p,
+ul li,
+a {
+  color: rgb(224, 224, 224);
+}
+
+.back p {
+  color: rgb(67, 67, 67);
 }

@@ -1,15 +1,12 @@
 .recipe--details--img {
-  margin-top: 5em;
-  margin-bottom: 2em;
+  margin-top: 1em;
+  margin-bottom: 0.3em;
   width: 100%;
-  height: 20em;
+  height: 15em;
   overflow: hidden;
   text-align: center;
-}
-
-h1 {
-  color: #794e00;
-  -webkit-text-stroke: 0.5px #f8f8f8;
+  color: rgb(255, 255, 255);
+  border-radius: 0.5em;
 }
 
 .recipe--details--img img {
@@ -20,13 +17,16 @@ h1 {
 .recipe--container {
   margin: 0 auto;
   width: 67%;
-  background-color: white;
+  background-color: #485654;
   text-align: center;
+  border-radius: 0em 0em 0.5em 0.5em;
 }
 
 .recipe--container h1 {
   text-align: center;
   text-transform: lowercase;
+  font-size: 0.9em;
+  color: #fddc9a;
 }
 
 .recipe--container h1:first-letter {
@@ -34,16 +34,17 @@ h1 {
 }
 
 .recipe--time {
-  border-bottom: 2em solid #f8f8f8;
+  border-bottom: 0.3em solid#d3d3d3;
   width: 100%;
-  font-size: 1.3em;
-  padding: 3em 5em;
-  color: rgb(67, 67, 67);
+  font-size: 1.1em;
+  padding: 2em 0em 1em 0em;
+  color: rgb(255, 255, 255);
   display: inline-block;
 }
 
 .recipe--time p {
   margin: 2em 0em 1em 0em;
+  color: rgb(255, 255, 255);
   display: inline-block;
 }
 
@@ -53,6 +54,7 @@ h1 {
 
 .recipe--diet ul li {
   margin-top: 1em;
+  color: rgb(255, 255, 255);
 }
 
 .recipe--diet .fas {
@@ -66,12 +68,14 @@ h1 {
   flex-direction: row;
   grid-gap: 0em;
   padding: 0em;
+  color: rgb(255, 255, 255);
 }
 
 .recipe--instructions ol li {
   list-style-type: decimal;
   text-align: left;
   margin: 1.2em 0em;
+  color: rgb(255, 255, 255);
 }
 
 ol > li::marker {
@@ -79,18 +83,21 @@ ol > li::marker {
 }
 
 .recipe--instructions-summary {
-  line-height: 2em;
+  line-height: 1.4em;
   flex: 3;
+  font-family: "inter";
   padding: 3em 2em 3em 3.7em;
 }
 
 .recipe--instructions-summary h2 {
   margin-bottom: 1em;
   text-align: left;
+  color: rgb(255, 255, 255);
+  color: #fddc9a;
 }
 
 .recipe--summary {
-  margin-top: 7em;
+  margin-top: 5em;
 }
 
 /* left box */
@@ -98,9 +105,9 @@ ol > li::marker {
 .recipe--ingridientsdiet {
   width: 100%;
   flex: 1;
-  line-height: 2em;
+  line-height: 1.3em;
   padding: 2em 3em 2em 2em;
-  border-right: 2em solid #f8f8f8;
+  border-right: 0.3em solid#d3d3d3;
 }
 
 .recipe--ingridientsdiet ul {
@@ -121,7 +128,7 @@ ol > li::marker {
 }
 
 h3 {
-  color: #000000;
+  color: rgb(255, 255, 255);
   font-size: 1.1em;
 }
 
@@ -168,6 +175,19 @@ h3 {
     text-align: center;
   }
 
+  .recipe--details--img {
+    width: 70%;
+    margin: 0 auto;
+    height: 17em;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .recipe--details--img img {
+    width: 200%;
+    margin: 0 auto;
+  }
+
   .recipe--time {
     padding: 3em 2em;
   }
@@ -184,7 +204,7 @@ h3 {
 
   .recipe--ingridientsdiet {
     border-right: 0em;
-    border-bottom: 1.5em solid #f8f8f8;
+    border-bottom: 0.3em solid#d3d3d3;
   }
 
   .recipe--instructions-summary {
@@ -194,7 +214,7 @@ h3 {
 
 @media screen and (max-width: 700px) {
   .recipe--details {
-    margin-top: 5em;
+    margin-top: 2em;
   }
 
   .recipe--details--img {
@@ -213,4 +233,14 @@ h3 {
   .recipe--container {
     width: 90%;
   }
+}
+
+p,
+ul li,
+a {
+  color: rgb(226, 226, 226);
+}
+
+.back p {
+  color: rgb(67, 67, 67);
 }
