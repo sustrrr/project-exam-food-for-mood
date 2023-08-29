@@ -461,6 +461,9 @@ footer {
 
 /* mobile */
 @media screen and (max-width: 440px) {
+  footer {
+    padding-top: 7em;
+  }
   .footer--info .main--button {
     width: 100%;
   }
@@ -487,6 +490,7 @@ footer {
 
   .footer--newsletter h2 {
     font-size: 0.9em;
+    font-weight: lighter;
   }
 }
 
