@@ -305,7 +305,7 @@ h1 {
 @media not all and (min-resolution: 0.001dpcm) {
   h1 {
     font-weight: lighter;
-    font-family: "bitter";
+    font-family: "domine";
   }
 
   h2 {
