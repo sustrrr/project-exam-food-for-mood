@@ -182,3 +182,7 @@ h1 {
     border-radius: 50em;
   }
 }
+
+.contactinfo .yest {
+  color: #fddc9a !important;
+}
