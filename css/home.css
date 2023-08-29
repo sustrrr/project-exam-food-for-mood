@@ -515,6 +515,14 @@
 }
 
 @media screen and (max-width: 500px) {
+  .title {
+    display: block;
+    font-size: 1em;
+    text-transform: uppercase;
+    margin-top: 1em;
+    font-weight: lighter;
+  }
+
   .welcome--container {
     display: flex;
     flex-direction: column-reverse;
