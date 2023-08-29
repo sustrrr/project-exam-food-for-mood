@@ -98,6 +98,10 @@ h1 {
   font-size: 0.9em;
 }
 
+.contactinfo .yest {
+  color: #fddc9a !important;
+}
+
 /* small pc */
 @media screen and (max-width: 1250px) {
   .recipe--welcome--img {
